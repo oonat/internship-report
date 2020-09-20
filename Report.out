@@ -3,7 +3,15 @@
 \BOOKMARK [2][-]{subsection.2.1}{Analysis Phase}{section.2}% 3
 \BOOKMARK [2][-]{subsection.2.2}{Design Phase}{section.2}% 4
 \BOOKMARK [2][-]{subsection.2.3}{Implementation Phase}{section.2}% 5
-\BOOKMARK [2][-]{subsection.2.4}{Testing Phase}{section.2}% 6
-\BOOKMARK [1][-]{section.3}{Organization}{}% 7
-\BOOKMARK [2][-]{subsection.3.1}{METU Data Mining Research Group}{section.3}% 8
-\BOOKMARK [1][-]{section.4}{Conclusion}{}% 9
+\BOOKMARK [3][-]{subsubsection.2.3.1}{Neo4j}{subsection.2.3}% 6
+\BOOKMARK [3][-]{subsubsection.2.3.2}{Numpy}{subsection.2.3}% 7
+\BOOKMARK [3][-]{subsubsection.2.3.3}{Scipy}{subsection.2.3}% 8
+\BOOKMARK [2][-]{subsection.2.4}{Eigentrust Weighted Trust Based Recommender}{section.2}% 9
+\BOOKMARK [2][-]{subsection.2.5}{Inverse Distance Weighted Trust Based Recommender}{section.2}% 10
+\BOOKMARK [2][-]{subsection.2.6}{Testing Phase}{section.2}% 11
+\BOOKMARK [3][-]{subsubsection.2.6.1}{Surprise}{subsection.2.6}% 12
+\BOOKMARK [3][-]{subsubsection.2.6.2}{Mathplotlib}{subsection.2.6}% 13
+\BOOKMARK [3][-]{subsubsection.2.6.3}{Leave-one-out Cross Validation}{subsection.2.6}% 14
+\BOOKMARK [1][-]{section.3}{Organization}{}% 15
+\BOOKMARK [2][-]{subsection.3.1}{METU Data Mining Research Group}{section.3}% 16
+\BOOKMARK [1][-]{section.4}{Conclusion}{}% 17

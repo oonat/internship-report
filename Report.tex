@@ -5,6 +5,7 @@
 \usepackage{graphicx}
 \graphicspath{{Images/}}
 \usepackage[colorinlistoftodos]{todonotes}
+\usepackage{listings}
 \usepackage{hyperref}
 \graphicspath{ {images/} }
 
@@ -58,12 +59,39 @@ Student's Signature \hspace{150px} Organization Approval \\
 \newpage
 
 \section{Introduction}
+I have done my summer internship at METU Data Mining Research Group under the supervision of Prof.Dr.Pınar KARAGÖZ and Prof.Dr.İsmail Hakkı TOROSLU. The task I have worked on was implementing a Trust Based Recommender using the collaborative filtering method and testing it on provided dataset. The dataset contains information about customers and the products they have bought. In addition to dataset, I was able to use eigentrust calculation and community detection modules provided by the TACOREC.
 
 \section{Project}
+During the internship, I implemented two different trust based recommenders : Eigentrust Weighted Recommender and Inverse Distance Weighted Recommender. The details of these two recommenders can be found in the section 2.3.
+
 \subsection{Analysis Phase}
+There were two problems I need to solve: \\
+1 - Dataset was very sparse \\ 
+2 - There was no explicit trust information \\
+In the both implementations I have made, first case handled by filtering the customers and products which purchased and were bought more than filtering threshold times. To gain better understanding on the second problem, I studied implicit trust calculation methods and looked into lots of research papers.
+
 \subsection{Design Phase}
 \subsection{Implementation Phase}
+Since there are two different implementations which contains lots of details. I have divided the details of the recommenders into two subsections: section 2.4 and 2.5. Under this subsection, the libraries and the technologies used in implementations are explained.
+\subsubsection{Neo4j}
+\paragraph{Installation}
+\subsubsection{Numpy}
+\paragraph{Installation}
+
+\begin{lstlisting}[language=bash]
+pip install numpy
+\end{lstlisting}
+
+
+\subsubsection{Scipy}
+\paragraph{Installation}
+
+\subsection{Eigentrust Weighted Trust Based Recommender}
+\subsection{Inverse Distance Weighted Trust Based Recommender}
 \subsection{Testing Phase}
+\subsubsection{Surprise}
+\subsubsection{Mathplotlib}
+\subsubsection{Leave-one-out Cross Validation}
 
 \section{Organization}
 \subsection{METU Data Mining Research Group}

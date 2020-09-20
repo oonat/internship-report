@@ -4,7 +4,17 @@
 \contentsline {subsection}{\numberline {2.1}Analysis Phase}{2}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}Design Phase}{2}{subsection.2.2}
 \contentsline {subsection}{\numberline {2.3}Implementation Phase}{2}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}Testing Phase}{2}{subsection.2.4}
-\contentsline {section}{\numberline {3}Organization}{2}{section.3}
-\contentsline {subsection}{\numberline {3.1}METU Data Mining Research Group}{2}{subsection.3.1}
-\contentsline {section}{\numberline {4}Conclusion}{2}{section.4}
+\contentsline {subsubsection}{\numberline {2.3.1}Neo4j}{3}{subsubsection.2.3.1}
+\contentsline {paragraph}{Installation}{3}{section*.2}
+\contentsline {subsubsection}{\numberline {2.3.2}Numpy}{3}{subsubsection.2.3.2}
+\contentsline {subsubsection}{\numberline {2.3.3}Scipy}{3}{subsubsection.2.3.3}
+\contentsline {paragraph}{Installation}{3}{section*.4}
+\contentsline {subsection}{\numberline {2.4}Eigentrust Weighted Trust Based Recommender}{3}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.5}Inverse Distance Weighted Trust Based Recommender}{3}{subsection.2.5}
+\contentsline {subsection}{\numberline {2.6}Testing Phase}{3}{subsection.2.6}
+\contentsline {subsubsection}{\numberline {2.6.1}Surprise}{3}{subsubsection.2.6.1}
+\contentsline {subsubsection}{\numberline {2.6.2}Mathplotlib}{3}{subsubsection.2.6.2}
+\contentsline {subsubsection}{\numberline {2.6.3}Leave-one-out Cross Validation}{3}{subsubsection.2.6.3}
+\contentsline {section}{\numberline {3}Organization}{3}{section.3}
+\contentsline {subsection}{\numberline {3.1}METU Data Mining Research Group}{3}{subsection.3.1}
+\contentsline {section}{\numberline {4}Conclusion}{3}{section.4}
