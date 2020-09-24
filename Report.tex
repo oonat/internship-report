@@ -7,7 +7,11 @@
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage{listings}
 \usepackage{hyperref}
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{positioning,fit,arrows.meta,backgrounds}
 \graphicspath{ {images/} }
+
 
 \usepackage{xcolor}
 
@@ -38,6 +42,18 @@
 \lstset{style=mystyle}
 \setcounter{tocdepth}{4}
 \setcounter{secnumdepth}{4}
+
+\tikzset{
+	module/.style={%
+		draw, rounded corners,
+		minimum width=#1,
+		minimum height=5mm,
+		font=\sffamily
+	},
+	module/.default=2cm,
+	>=LaTeX
+}
+
 
 \begin{document}
 \begin{titlepage}
@@ -117,8 +133,8 @@ pip install neo4j
 \subparagraph{Configuration}:
 \begin{lstlisting}[language=python]
 import neo4j
-
 ...
+
 uri = self._config["database"]["neo4j"]["uri"]
 user = self._config["database"]["neo4j"]["user"]
 password = self._config["database"]["neo4j"]["password"]
@@ -128,10 +144,11 @@ self._driver = neo4j.Driver(uri, auth=(user, password))
 \end{lstlisting}
 
 \subparagraph{Sample Usage}:
-\begin{lstlisting}[language=python, caption=Neo4j cypher example]
+\begin{lstlisting}[language=python, caption=Neo4j driver example]
 import neo4j
 ...
-    def get_customer_trust(self, customer_id):
+
+	def get_customer_trust(self, customer_id):
 
 		query = (
 			f"MATCH (u:Customer)-[r:BELONGS_IN]->(:Community) "
@@ -205,9 +222,59 @@ class Graph(object):
 
 
 \subsection{Eigentrust Weighted Trust Based Recommender}
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[
+	% This will show the frame around the figure
+	show background rectangle]
+	
+	% Place first 6 items
+	\node[module] (recommender) at (0,2) {recommender};
+	\node[module] (filterer) at (0,0) {filterer};
+	
+	
+	\node (fit) at (0,1) [draw,thick,minimum width=3.5cm,minimum height=3cm] {};
+	
+	\node (db) at (5,2) [draw,thick,minimum width=2.5cm,minimum height=1cm] {Neo4j Db};
+	
+	
+	%arrow between boxes
+	\draw[<->,dashed] (db)-- node[above] {Neo4j} node[below] {driver} ++ (recommender);
+	
+	\draw[<->] (recommender)--(filterer);
+	
+	\end{tikzpicture}
+	\caption{Recommender Structure}
+\end{figure}
 \subsubsection{About Eigentrust}
 Eigentrust\cite{Eigentrust}
 \subsection{Inverse Distance Weighted Trust Based Recommender}
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+% This will show the frame around the figure
+show background rectangle]
+
+% Place first 6 items
+\node[module] (recommender) at (0,1.5) {recommender};
+\node[module] (filterer) at (0,0) {filterer};
+
+
+\node (fit) at (0,0) [draw,thick,minimum width=3.5cm,minimum height=4cm] {};
+
+\node (db) at (5,1.5) [draw,thick,minimum width=2.5cm,minimum height=1cm] {Neo4j Db};
+
+\node[module] (graph) at (0,-1.5) {graph};
+
+%arrow between boxes
+\draw[<->,dashed] (db)-- node[above] {Neo4j} node[below] {driver} ++ (recommender);
+
+\draw[<->] (recommender)--(filterer);
+\draw[<->] (filterer)--(graph);
+
+\end{tikzpicture}
+\caption{Recommender Structure}
+\end{figure}
 Inverse Distance Weighted Trust Based Recommender consists of three different modules: \\
 \begin{enumerate}
 \item \textbf{graph.py}: Responsible for creating adjacency matrix from given customer versus product matrix, calculating the distances between customers applying djkstra algorithm to the adjacency matrix using scipy library, and calculating the trust by taking the recreciprocal of the distance matrix.

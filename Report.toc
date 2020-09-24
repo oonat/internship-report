@@ -10,25 +10,25 @@
 \contentsline {subparagraph}{Sample Usage}{3}{section*.4}
 \contentsline {subsubsection}{\numberline {2.3.2}Numpy}{3}{subsubsection.2.3.2}
 \contentsline {subparagraph}{Installation}{3}{section*.5}
-\contentsline {subparagraph}{Sample Usage}{3}{section*.6}
+\contentsline {subparagraph}{Sample Usage}{4}{section*.6}
 \contentsline {subsubsection}{\numberline {2.3.3}Scipy}{4}{subsubsection.2.3.3}
 \contentsline {subparagraph}{Installation}{4}{section*.7}
 \contentsline {subparagraph}{Sample Usage}{4}{section*.8}
 \contentsline {subsection}{\numberline {2.4}Eigentrust Weighted Trust Based Recommender}{5}{subsection.2.4}
 \contentsline {subsubsection}{\numberline {2.4.1}About Eigentrust}{5}{subsubsection.2.4.1}
-\contentsline {subsection}{\numberline {2.5}Inverse Distance Weighted Trust Based Recommender}{5}{subsection.2.5}
-\contentsline {subsection}{\numberline {2.6}Testing Phase}{6}{subsection.2.6}
-\contentsline {subsubsection}{\numberline {2.6.1}Methods}{6}{subsubsection.2.6.1}
-\contentsline {paragraph}{\numberline {2.6.1.1}Leave-one-out Cross Validation}{6}{paragraph.2.6.1.1}
-\contentsline {paragraph}{\numberline {2.6.1.2}K-Fold Cross Validation}{6}{paragraph.2.6.1.2}
-\contentsline {subsubsection}{\numberline {2.6.2}Results}{6}{subsubsection.2.6.2}
-\contentsline {subsubsection}{\numberline {2.6.3}Libraries I Used}{6}{subsubsection.2.6.3}
-\contentsline {paragraph}{\numberline {2.6.3.1}Surprise}{6}{paragraph.2.6.3.1}
-\contentsline {subparagraph}{Installation}{6}{section*.9}
-\contentsline {subparagraph}{Sample Usage}{6}{section*.10}
-\contentsline {paragraph}{\numberline {2.6.3.2}Matplotlib}{6}{paragraph.2.6.3.2}
-\contentsline {subparagraph}{Installation}{6}{section*.11}
-\contentsline {subparagraph}{Sample Usage}{7}{section*.12}
-\contentsline {section}{\numberline {3}Organization}{7}{section.3}
-\contentsline {subsection}{\numberline {3.1}METU Data Mining Research Group}{7}{subsection.3.1}
-\contentsline {section}{\numberline {4}Conclusion}{7}{section.4}
+\contentsline {subsection}{\numberline {2.5}Inverse Distance Weighted Trust Based Recommender}{6}{subsection.2.5}
+\contentsline {subsection}{\numberline {2.6}Testing Phase}{7}{subsection.2.6}
+\contentsline {subsubsection}{\numberline {2.6.1}Methods}{7}{subsubsection.2.6.1}
+\contentsline {paragraph}{\numberline {2.6.1.1}Leave-one-out Cross Validation}{7}{paragraph.2.6.1.1}
+\contentsline {paragraph}{\numberline {2.6.1.2}K-Fold Cross Validation}{7}{paragraph.2.6.1.2}
+\contentsline {subsubsection}{\numberline {2.6.2}Results}{7}{subsubsection.2.6.2}
+\contentsline {subsubsection}{\numberline {2.6.3}Libraries I Used}{7}{subsubsection.2.6.3}
+\contentsline {paragraph}{\numberline {2.6.3.1}Surprise}{7}{paragraph.2.6.3.1}
+\contentsline {subparagraph}{Installation}{7}{section*.9}
+\contentsline {subparagraph}{Sample Usage}{7}{section*.10}
+\contentsline {paragraph}{\numberline {2.6.3.2}Matplotlib}{7}{paragraph.2.6.3.2}
+\contentsline {subparagraph}{Installation}{7}{section*.11}
+\contentsline {subparagraph}{Sample Usage}{8}{section*.12}
+\contentsline {section}{\numberline {3}Organization}{8}{section.3}
+\contentsline {subsection}{\numberline {3.1}METU Data Mining Research Group}{8}{subsection.3.1}
+\contentsline {section}{\numberline {4}Conclusion}{8}{section.4}
