@@ -1,3 +1,10 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{Eigentrust}
+{\sc Kamvar, S.~D., Schlosser, M.~T., and Garcia-Molina, H.}
+\newblock The eigentrust algorithm for reputation management in p2p networks.
+\newblock In {\em Proceedings of the 12th International Conference on World
+  Wide Web\/} (New York, NY, USA, 2003), WWW '03, Association for Computing
+  Machinery, p.~640–651.
 
 \end{thebibliography}
