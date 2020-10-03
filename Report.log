@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.10.12)  4 OCT 2020 02:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.10.12)  4 OCT 2020 02:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -723,11 +723,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.105 	\newpage
+l.101 	\newpage
                 [1
 
 
-] [2]
+] (./Chapters/1_Introduction.tex) (./Chapters/2_Project.tex)
+(./Chapters/3_Analysis_Phase.tex) (./Chapters/4_Design_Phase.tex)
+(./Chapters/5_Implementation_Phase.tex [2]
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
@@ -736,11 +738,12 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
-) [3] [4]
+) [3] [4])
+(./Chapters/6_Eigentrust.tex
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
-)
-Overfull \hbox (2.65242pt too wide) in paragraph at lines 252--253
+))
+Overfull \hbox (2.65242pt too wide) in paragraph at lines 28--120
  []\OT1/cmr/bx/n/12 Problem en-coun-tered with Eigen-trust:[] \OT1/cmr/m/n/12 E
 s-pe-cially for the cus-tomers
  []
@@ -750,15 +753,15 @@ has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.253 
-      ] [6pdfTeX warning (ext4): destination with the same identifier (name{fig
-ure.2}) has been already used, duplicate ignored
+l.120 
+      ] (./Chapters/7_Inverse.tex [6pdfTeX warning (ext4): destination with the
+ same identifier (name{figure.2}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.300 	\end{figure}
-                   ]
-Overfull \hbox (35.43726pt too wide) in paragraph at lines 326--328
+l.46 	\end{figure}
+                  ]
+Overfull \hbox (35.43726pt too wide) in paragraph at lines 72--74
 \OT1/cmr/m/n/12 To con-struct the "dis-tance ma-trix", the graph mod-ule uses "
 Di-jk-stra's Algorithm"[[]]
  []
@@ -768,38 +771,45 @@ has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.331 	\begin{equation*}
-                        pdfTeX warning (ext4): destination with the same identi
-fier (name{figure.4}) has been already used, duplicate ignored
+l.77 	\begin{equation*}
+                       pdfTeX warning (ext4): destination with the same identif
+ier (name{figure.4}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.331 	\begin{equation*}
-                        ]
-Overfull \hbox (6.59961pt too wide) in paragraph at lines 338--340
+l.77 	\begin{equation*}
+                       ]
+Overfull \hbox (6.59961pt too wide) in paragraph at lines 84--86
 \OT1/cmr/m/n/12 function where $\OML/cmm/m/it/12 d\OT1/cmr/m/n/12 (\OML/cmm/m/i
 t/12 c[]; c[]\OT1/cmr/m/n/12 )$ rep-re-sents the short-est dis-tance be-tween t
 he $\OML/cmm/m/it/12 customer[]$
  []
 
-[8] [9] (./Report.bbl [10]) [11]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 414.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 414.
- (./Report.aux (./GradingRubric.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 414.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 414.
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--86
+
+ []
+
+) [8] (./Chapters/8_Testing_Phase.tex [9]) (./Chapters/9_Organization.tex)
+(./Chapters/10_Conclusion.tex) (./Report.bbl [10]) [11]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 137.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 137.
+ (./Report.aux
+(./GradingRubric.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 137.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 137.
 Package rerunfilecheck Info: File `Report.out' has not changed.
 (rerunfilecheck)             Checksum: FF6AEA9C5162825C33E81F0D6A2B961E;1929.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 414.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 137.
  ) 
 Here is how much of TeX's memory you used:
- 20834 strings out of 494923
- 370931 string characters out of 6180741
- 503723 words of memory out of 5000000
+ 20865 strings out of 494923
+ 371634 string characters out of 6180741
+ 503734 words of memory out of 5000000
  23616 multiletter control sequences out of 15000+600000
  11108 words of font info for 40 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 62i,17n,99p,564b,1963s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,17n,99p,592b,1963s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/tex
@@ -814,7 +824,7 @@ sy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Report.pdf (12 pages, 222038 bytes).
+Output written on Report.pdf (12 pages, 222042 bytes).
 PDF statistics:
  447 PDF objects out of 1000 (max. 8388607)
  412 compressed objects within 5 object streams
