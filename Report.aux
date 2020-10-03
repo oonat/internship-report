@@ -28,8 +28,8 @@
 \@writefile{toc}{\contentsline {subparagraph}{Configuration}{3}{section*.3}}
 \@writefile{toc}{\contentsline {subparagraph}{Sample Usage}{3}{section*.4}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {1}Neo4j driver example}{3}{lstlisting.1}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.2}Numpy}{3}{subsubsection.2.3.2}}
-\@writefile{toc}{\contentsline {subparagraph}{Installation}{3}{section*.5}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.2}Numpy}{4}{subsubsection.2.3.2}}
+\@writefile{toc}{\contentsline {subparagraph}{Installation}{4}{section*.5}}
 \@writefile{toc}{\contentsline {subparagraph}{Sample Usage}{4}{section*.6}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {2}Numpy example}{4}{lstlisting.2}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.3}Scipy}{4}{subsubsection.2.3.3}}
@@ -37,28 +37,46 @@
 \@writefile{toc}{\contentsline {subparagraph}{Sample Usage}{4}{section*.8}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {3}Scipy example}{4}{lstlisting.3}}
 \citation{Eigentrust}
+\citation{Tacorec}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Eigentrust Weighted Trust Based Recommender}{5}{subsection.2.4}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Recommender Structure}}{5}{figure.1}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.4.1}About Eigentrust}{5}{subsubsection.2.4.1}}
+\@writefile{toc}{\contentsline {subparagraph}{Problem encountered with Eigentrust:}{6}{section*.9}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.5}Inverse Distance Weighted Trust Based Recommender}{6}{subsection.2.5}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Recommender Structure}}{6}{figure.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.6}Testing Phase}{7}{subsection.2.6}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.1}Methods}{7}{subsubsection.2.6.1}}
-\@writefile{toc}{\contentsline {paragraph}{\numberline {2.6.1.1}Leave-one-out Cross Validation}{7}{paragraph.2.6.1.1}}
-\@writefile{toc}{\contentsline {paragraph}{\numberline {2.6.1.2}K-Fold Cross Validation}{7}{paragraph.2.6.1.2}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.2}Results}{7}{subsubsection.2.6.2}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.3}Libraries I Used}{7}{subsubsection.2.6.3}}
-\@writefile{toc}{\contentsline {paragraph}{\numberline {2.6.3.1}Surprise}{7}{paragraph.2.6.3.1}}
-\@writefile{toc}{\contentsline {subparagraph}{Installation}{7}{section*.9}}
-\@writefile{toc}{\contentsline {subparagraph}{Sample Usage}{7}{section*.10}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {4}Surprise example}{7}{lstlisting.4}}
-\@writefile{toc}{\contentsline {paragraph}{\numberline {2.6.3.2}Matplotlib}{7}{paragraph.2.6.3.2}}
-\@writefile{toc}{\contentsline {subparagraph}{Installation}{7}{section*.11}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.1}Graph Module}{6}{subsubsection.2.5.1}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.5.1.1}Constructing Adjacency Matrix and Distance Matrix}{6}{paragraph.2.5.1.1}}
+\citation{Dijkstra}
+\@writefile{toc}{\contentsline {subparagraph}{Proposed Method 1: Unweighted Graph}{7}{section*.10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces $c_{1}$ and $c_{2}$ have purchased at least 1 joint product, but $c_{1}$ and $c_{3}$ do not have a joint product}}{7}{figure.3}}
+\@writefile{toc}{\contentsline {subparagraph}{Proposed Method 2: Euclidean Distance Weighted Graph}{7}{section*.11}}
+\newlabel{eqn:euclidean_distance}{{1}{7}{Proposed Method 2: Euclidean Distance Weighted Graph}{equation.2.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces euclidean distance between $c_{1}$ and $c_{2}$ equals 3, and $c_{1}$ and $c_{3}$ do not have a joint product}}{7}{figure.4}}
+\@writefile{toc}{\contentsline {subparagraph}{Dijkstra's Algorithm}{7}{section*.12}}
+\citation{Movielens}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.5.1.2}Trust Calculation}{8}{paragraph.2.5.1.2}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.2}Filterer Module}{8}{subsubsection.2.5.2}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.3}Recommender Module}{8}{subsubsection.2.5.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6}Testing Phase}{9}{subsection.2.6}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.1}Methods}{9}{subsubsection.2.6.1}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.6.1.1}Leave-one-out Cross Validation}{9}{paragraph.2.6.1.1}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.6.1.2}K-Fold Cross Validation}{9}{paragraph.2.6.1.2}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.2}Results}{9}{subsubsection.2.6.2}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.3}Libraries I Used}{9}{subsubsection.2.6.3}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.6.3.1}Surprise}{9}{paragraph.2.6.3.1}}
+\@writefile{toc}{\contentsline {subparagraph}{Installation}{9}{section*.13}}
+\@writefile{toc}{\contentsline {subparagraph}{Sample Usage}{9}{section*.14}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4}Surprise example}{9}{lstlisting.4}}
 \bibstyle{acm}
 \bibdata{Bibliography.bib}
-\bibcite{Eigentrust}{1}
-\@writefile{toc}{\contentsline {subparagraph}{Sample Usage}{8}{section*.12}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {5}Matplotlib example}{8}{lstlisting.5}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Organization}{8}{section.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}METU Data Mining Research Group}{8}{subsection.3.1}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Conclusion}{8}{section.4}}
+\bibcite{Tacorec}{1}
+\bibcite{Dijkstra}{2}
+\bibcite{Movielens}{3}
+\bibcite{Eigentrust}{4}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.6.3.2}Matplotlib}{10}{paragraph.2.6.3.2}}
+\@writefile{toc}{\contentsline {subparagraph}{Installation}{10}{section*.15}}
+\@writefile{toc}{\contentsline {subparagraph}{Sample Usage}{10}{section*.16}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {5}Matplotlib example}{10}{lstlisting.5}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Organization}{10}{section.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}METU Data Mining Research Group}{10}{subsection.3.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Conclusion}{10}{section.4}}

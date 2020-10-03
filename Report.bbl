@@ -1,5 +1,20 @@
 \begin{thebibliography}{1}
 
+\bibitem{Tacorec}
+{\sc Aksoy, K., Odabas, M., Bozdogan, I., and Temur, A.}
+\newblock Tacorec.
+\newblock \url{https://senior.ceng.metu.edu.tr/2020/tacorec/}, 2020.
+
+\bibitem{Dijkstra}
+{\sc Dijkstra, E.~W.}
+\newblock Dijkstra's algorithm.
+\newblock \url{https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm}.
+
+\bibitem{Movielens}
+{\sc Harper, F.~M., and Konstan, J.~A.}
+\newblock The movielens datasets: History and context.
+\newblock {\em ACM Trans. Interact. Intell. Syst. 5}, 4 (Dec. 2015).
+
 \bibitem{Eigentrust}
 {\sc Kamvar, S.~D., Schlosser, M.~T., and Garcia-Molina, H.}
 \newblock The eigentrust algorithm for reputation management in p2p networks.

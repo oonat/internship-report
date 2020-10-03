@@ -4,44 +4,44 @@ The top-level auxiliary file: Report.aux
 A level-1 auxiliary file: GradingRubric.aux
 The style file: acm.bst
 Database file #1: Bibliography.bib.bib
-You've used 1 entry,
+You've used 4 entries,
             2253 wiz_defined-function locations,
-            538 strings with 4197 characters,
-and the built_in function-call counts, 528 in all, are:
-= -- 54
-> -- 17
+            556 strings with 4587 characters,
+and the built_in function-call counts, 1291 in all, are:
+= -- 122
+> -- 58
 < -- 0
-+ -- 8
-- -- 6
-* -- 29
-:= -- 72
-add.period$ -- 3
-call.type$ -- 1
-change.case$ -- 6
++ -- 26
+- -- 20
+* -- 78
+:= -- 201
+add.period$ -- 12
+call.type$ -- 4
+change.case$ -- 22
 chr.to.int$ -- 0
-cite$ -- 1
-duplicate$ -- 34
-empty$ -- 40
-format.name$ -- 6
-if$ -- 125
+cite$ -- 4
+duplicate$ -- 59
+empty$ -- 105
+format.name$ -- 20
+if$ -- 282
 int.to.chr$ -- 0
-int.to.str$ -- 1
-missing$ -- 1
-newline$ -- 8
-num.names$ -- 2
-pop$ -- 8
+int.to.str$ -- 4
+missing$ -- 2
+newline$ -- 23
+num.names$ -- 8
+pop$ -- 31
 preamble$ -- 1
-purify$ -- 5
+purify$ -- 18
 quote$ -- 0
-skip$ -- 33
+skip$ -- 53
 stack$ -- 0
-substring$ -- 24
-swap$ -- 20
+substring$ -- 40
+swap$ -- 26
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 4
+type$ -- 16
 warning$ -- 0
-while$ -- 3
-width$ -- 2
-write$ -- 14
+while$ -- 9
+width$ -- 5
+write$ -- 42
