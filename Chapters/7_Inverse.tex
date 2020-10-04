@@ -1,3 +1,4 @@
+\label{inverse_section}
 	\begin{figure}[H]
 		\centering
 		\begin{tikzpicture}[
@@ -11,26 +12,32 @@
 		
 		\node (fit) at (0,0) [draw,thick,minimum width=3.5cm,minimum height=4cm] {};
 		
-		\node (db) at (5,1.5) [draw,thick,minimum width=2.5cm,minimum height=1cm] {Neo4j Db};
+		\node (db) at (7,1.5) [draw,thick,minimum width=2.5cm,minimum height=1cm] {Neo4j Db};
 		
 		\node[module] (graph) at (0,-1.5) {Graph};
 		
 		%arrow between boxes
-		\draw[<->,dashed] (db)-- node[above] {Neo4j} node[below] {driver} ++ (recommender);
+		\draw[<->,dashed] (db)-- node[above] {recommendations} node[below] {transactions} ++ (recommender);
 		
 		\draw[<->] (recommender)--(filterer);
 		\draw[<->] (filterer)--(graph);
 		
 		\end{tikzpicture}
 		\caption{Recommender Structure}
+		\label{fig:inverse_structure}
 	\end{figure}
 	Inverse Distance Weighted Trust Based Recommender consists of three modules:
 	
-	\subsubsection{Graph Module} Responsible for creating adjacency matrix from given customer versus product matrix, calculating the distances between customers applying djkstra algorithm to the adjacency matrix using scipy library, and calculating the trust by taking the recreciprocal of the distance matrix.
+	\subsubsection{Graph Module} Graph Module is responsible for three tasks:
+	\begin{enumerate}
+		\item Constructing "adjacency matrix" from "customer versus product table" provided by Filterer module
+		\item Constructing "distance matrix" using "adjacency matrix"
+		\item Constructing "trust matrix" using "distance matrix"
+	\end{enumerate}
 	\paragraph{Constructing Adjacency Matrix and Distance Matrix}\mbox{}\\
-	To construct the "adjacency matrix" from customer versus products table, I propose two methods:
+	Since the recommender is tested in both the datasets with implicit ratings and explicit ratings, to construct the "adjacency matrix" from customer versus products table, I propose two methods: 
 	\subparagraph{Proposed Method 1: Unweighted Graph}\mbox{}\\
-	In this method, the "adjacency matrix" is constructed based on whether customers purchased a joint product or not. In other words, edge between two customers can exist if and only if the intersection of the set of products they purchased is not the empty set.
+	In this method, the "adjacency matrix" is constructed based on whether customers purchased a joint product or not. In other words, edge between two customers can exist if and only if the intersection of the set of products they purchased is not the empty set. This method is proposed for especially the datasets with \textbf{implicit ratings}.
 	\begin{figure}[H]
 		\centering
 		\begin{tikzpicture}
@@ -46,7 +53,7 @@
 	\end{figure}
 	
 	\subparagraph{Proposed Method 2: Euclidean Distance Weighted Graph}\mbox{}\\
-	In this method, the "adjacency matrix" is constructed based on the "euclidean distances"\ref{eqn:euclidean_distance} between customers. 
+	In this method, the "adjacency matrix" is constructed based on the "euclidean distances"\ref{eqn:euclidean_distance} between customers. This method is proposed for especially the datasets with \textbf{explicit ratings}.
 	\begin{equation} 
 	\label{eqn:euclidean_distance}
 	\begin{split}
@@ -73,7 +80,7 @@
 	To construct the "distance matrix", the graph module uses "Dijkstra's Algorithm"\cite{Dijkstra} which takes the adjacency matrix as parameter and returns the distance matrix.
 	
 	\paragraph{Trust Calculation}\mbox{}\\
-	After calculating the shortest distance between each pair of customers using "Dijkstra's Algorithm", to calculate the trust score between customers Graph module uses
+	After calculating the shortest distance between each pair of customers using "Dijkstra's Algorithm", to calculate the trust scores between customers Graph module uses
 	\begin{equation*} 
 	T(c_{1}, c_{2})= \left\{
 	\begin{array}{lr} 
@@ -82,11 +89,11 @@
 	\end{array}
 	\right.
 	\end{equation*}
-	function where $d(c_{1}, c_{2})$ represents the shortest distance between the $customer_{1}$ and $customer_{2}$. \\
+	function where $d(c_{1}, c_{2})$ represents the shortest distance between the $customer_{1}$ and $customer_{2}$. If $d(c_{1}, c_{2})$ equals $np.inf$ that means either there is no path connecting the customers or the shortest distance between the customers exceeds the distance limit specified in the config file. \\
 	
 	\textbf{A benefit of the method:} Especially for excessively sparse datasets, recommenders using euclidean distance-based similarity fails since they cannot calculate similarity score for the the customer pairs with no common products.	Since the  "Dijkstra's Algorithm" propagates weights even for the customer pairs with no common products, we are able to calculate trust scores between the customers.
 	
-	\subsubsection{Filterer Module} The module initially takes list of unsorted and unfiltered transaction list and filters it to create more denser customer versus product matrix. Then creates a graph object by giving the customer versus product matrix as parameter and use the trust matrix created by the graph object to calculate recommendation coefficient for each product. Finally, for each user, the module sorts all products with respect to their recommendation coefficients in descending order and recommends top k of them.
+	\subsubsection{Filterer Module} The module initially takes transaction list and filters it to create denser customer versus product matrix. Then creates a graph object by giving the customer versus product matrix as parameter and use the trust matrix created by the graph object to calculate recommendation coefficient for each product. Finally, for each user, the module sorts all products with respect to their recommendation coefficients in descending order and recommends top k of them.
 	\begin{equation} 
 	\begin{split}
 	w(c_{1}, c_{2}) = \frac{2*sim(c_{1},c_{2})*trust(c_{2})}{sim(c_{1},c_{2})+trust(c_{2})}
@@ -98,4 +105,8 @@
 	p(i) = \frac{\sum_{c \in C}^{} w(c_{target}, c)*r_{c}}{\sum_{c \in C}^{} w(c_{target}, c)}
 	\end{split}
 	\end{equation}
-	\subsubsection{Recommender Module} This module sends the list of transactions to the trust\_based\_filterer and takes the list of recommendations for each customer in the database as a response. The main task of this module is writing the recommendations to the database using neo4j driver.
+	\subsubsection{Recommender Module} Recommender Module is basically responsible from reading/writing. The module has two tasks:
+	\begin{enumerate}
+		\item Getting transaction list which contains customer id product id pairs from the Neo4j database using neo4j driver and sending the list to the Filterer module as parameter.
+		\item Getting the recommendation list which contains ids of the customers and corresponding recommended products from the Filterer module and writing these recommendations to Neo4j database as a relationship between the customer and the recommended product using neo4j driver.
+	\end{enumerate}
