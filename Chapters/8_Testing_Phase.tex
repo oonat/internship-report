@@ -1,6 +1,7 @@
 	\subsubsection{Methods}
 	\paragraph{Leave-one-out Cross Validation}
 	\paragraph{K-Fold Cross Validation}
+	\paragraph{Shuffle Split Cross Validation}
 	\subsubsection{Results}
 	\paragraph{Stockmount} \mbox{}\\
 	\textbf{About the dataset:} Dataset origanally consists of 142501 customers and 73482 products with implicit ratings (i.e. purchased or not). However, to make the customer versus product matrix a little denser, customers with less than 2 products and products with less than 2 customers are eliminated. After filtering,
@@ -18,7 +19,7 @@
 		\end{tabular}
 	\end{center} 
 	\vspace{0.5cm}
-	\textbf{Testing method:} Since the dataset contains implicit ratings, I preferred to use "Hit Rate" rather than RMSE or MAE as the test metric and "Leave-one-out CV" as the cross validation method. Basically, for each deleted transaction, test module checked whether the product of the deleted transaction is within the recommended products.\\
+	\textbf{Testing method:} Since the dataset contains implicit ratings, I preferred to use "Hit Rate" rather than RMSE or MAE as the test metric and "Leave-one-out CV" as the cross validation iterator. Basically, for each deleted transaction, test module checked whether the product of the deleted transaction is within the recommended products.\\
 	\textbf{Tested Recommender:} Eigentrust Weighted Trust Based Recommender \ref{eigentrust_section} \\ \\
 	\textbf{Results:}
 	\begin{center}
@@ -35,7 +36,7 @@
 		\end{tabular}
 	\end{center} 
 
-	\paragraph{Movielens100k} \mbox{}\\
+	\paragraph{Movielens100k \cite{Movielens}} \mbox{}\\
 	\textbf{About the dataset:} 
 	\begin{center}
 		\begin{tabular}{ | c | c |}
@@ -55,31 +56,27 @@
 		\end{tabular}
 	\end{center} 
 	\vspace{0.5cm}
-	\textbf{Testing method:} I preferred to use RMSE and MAE as the test metric and "K-Fold CV" as the cross validation method. Tests were done using Surprise \ref{surprise}.\\
+	\textbf{Testing method:} I preferred to use RMSE and MAE as the test metric and "K-Fold CV" as the cross validation iterator. Tests were done using Surprise \ref{surprise}.\\
 	\textbf{Tested Recommender:} Inverse Distance Weighted Trust Based Recommender \ref{inverse_section} \\ \\
 	\textbf{Results:}
 	
-	\paragraph{Amazon Food Reviews} \mbox{}\\
+	\paragraph{Amazon Food Reviews \cite{Amazonfoodreviews}} \mbox{}\\
 	\textbf{About the dataset:} 
 	\begin{center}
 		\begin{tabular}{ | c | c |}
 			\hline
-			&Movielens 100k  \\  
+			&Amazon Food Reviews (threshold = 10)  \\  
 			\hline
-			Number of ratings  & 100.000  \\   
+			Number of Users & 4276 \\
 			\hline
-			Number of users & 943 \\
+			Number of Products & 1140 \\
 			\hline
-			Number of movies & 1682 \\
-			\hline
-			Rating range & 1-5 \\
-			\hline
-			Sparsity & 93.6953 \% \\
+			Rating Range & 1-5 \\
 			\hline
 		\end{tabular}
 	\end{center} 
 	\vspace{0.5cm}
-	\textbf{Testing method:} I preferred to use RMSE and MAE as the test metric and "K-Fold CV" as the cross validation method. Tests were done using Surprise \ref{surprise}.\\
+	\textbf{Testing method:} For this dataset, I wanted to see how efficiently the recommender works on extremely sparse datasets, as a result I prefered to use "Shuffle Split CV" as the cross validation iterator since it is easy to set up the test and train set ratios. For the test metric, RMSE and MAE were used. Tests were done using Surprise \ref{surprise}.\\
 	\textbf{Tested Recommender:} Inverse Distance Weighted Trust Based Recommender \ref{inverse_section} \\ \\
 	\textbf{Benchmark:} \\
 	\textbf{Number of Splits: 3, Trainset: 0.5, Testset: 0.5, Sparsity: 0.9931}
@@ -124,7 +121,7 @@
 	
 	
 	\subsubsection{Libraries I Used}
-	\paragraph{Surprise} 
+	\paragraph{Surprise \cite{Surprise}}
 	\label{surprise}
 	\subparagraph{Installation}:
 	\begin{lstlisting}[language=bash]
