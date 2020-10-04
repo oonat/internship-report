@@ -23,9 +23,12 @@
 \BOOKMARK [4][-]{paragraph.2.6.1.1}{Leave-one-out Cross Validation}{subsubsection.2.6.1}% 23
 \BOOKMARK [4][-]{paragraph.2.6.1.2}{K-Fold Cross Validation}{subsubsection.2.6.1}% 24
 \BOOKMARK [3][-]{subsubsection.2.6.2}{Results}{subsection.2.6}% 25
-\BOOKMARK [3][-]{subsubsection.2.6.3}{Libraries I Used}{subsection.2.6}% 26
-\BOOKMARK [4][-]{paragraph.2.6.3.1}{Surprise}{subsubsection.2.6.3}% 27
-\BOOKMARK [4][-]{paragraph.2.6.3.2}{Matplotlib}{subsubsection.2.6.3}% 28
-\BOOKMARK [1][-]{section.3}{Organization}{}% 29
-\BOOKMARK [2][-]{subsection.3.1}{METU Data Mining Research Group}{section.3}% 30
-\BOOKMARK [1][-]{section.4}{Conclusion}{}% 31
+\BOOKMARK [4][-]{paragraph.2.6.2.1}{Stockmount}{subsubsection.2.6.2}% 26
+\BOOKMARK [4][-]{paragraph.2.6.2.2}{Movielens100k}{subsubsection.2.6.2}% 27
+\BOOKMARK [4][-]{paragraph.2.6.2.3}{Amazon Food Reviews}{subsubsection.2.6.2}% 28
+\BOOKMARK [3][-]{subsubsection.2.6.3}{Libraries I Used}{subsection.2.6}% 29
+\BOOKMARK [4][-]{paragraph.2.6.3.1}{Surprise}{subsubsection.2.6.3}% 30
+\BOOKMARK [4][-]{paragraph.2.6.3.2}{Matplotlib}{subsubsection.2.6.3}% 31
+\BOOKMARK [1][-]{section.3}{Organization}{}% 32
+\BOOKMARK [2][-]{subsection.3.1}{METU Data Mining Research Group}{section.3}% 33
+\BOOKMARK [1][-]{section.4}{Conclusion}{}% 34
