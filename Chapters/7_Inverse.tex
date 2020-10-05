@@ -51,6 +51,8 @@
 		\end{tikzpicture} 
 		\caption{$c_{1}$ and $c_{2}$ have purchased at least 1 joint product, but $c_{1}$ and $c_{3}$ do not have a joint product}
 	\end{figure}
+
+	\textbf{Problem encountered with Proposed Method 1:} During the tests applied on Movielens100k dataset, I observed that although the dataset is sparse, the maximum distance between two users was calculated as 2. Since the distances were distributed in such small range, trust values calculated with this method were not so meaningful. With this observation, I decided to propose another method and use "Unweighted Graph" method in extremely sparse datasets.
 	
 	\subparagraph{Proposed Method 2: Euclidean Distance Weighted Graph}\mbox{}\\
 	In this method, the "adjacency matrix" is constructed based on the "euclidean distances"\ref{eqn:euclidean_distance} between customers. This method is proposed for especially the datasets with \textbf{explicit ratings}.
@@ -72,9 +74,8 @@
 		\path[-] (a) edge node[above]{3} (b);
 		\path[-] (b) edge node[above]{2} (c);
 		\end{tikzpicture} 
-		\caption{euclidean distance between $c_{1}$ and $c_{2}$ equals 3, and $c_{1}$ and $c_{3}$ do not have a joint product}
+		\caption{euclidean distance between $c_{1}$ and $c_{2}$ equals to 3, and $c_{1}$ and $c_{3}$ do not have a joint product}
 	\end{figure}
-	\textbf{Problem encountered with euclidean distance method:} As the module is generally tested on sparse datasets, 
 	
 	\subparagraph{Dijkstra's Algorithm}\mbox{}\\
 	To construct the "distance matrix", the graph module uses "Dijkstra's Algorithm"\cite{Dijkstra} which takes the adjacency matrix as parameter and returns the distance matrix.

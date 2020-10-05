@@ -1,10 +1,14 @@
 \subsubsection{For Eigentrust Weighted Recommender}
-Eigentrust represents how strongly connected the customers are to their communities (for detailed info check section \ref{about_eigentrust}) and stored as a property of the relationship between the customer and his/her community. We can draw two conclusions from this information;
+Eigentrust represents how strongly connected the customers are to their communities (for the detailed information, please check section \ref{about_eigentrust}) and stored as a property of the relationship between the customer and his/her community. We can draw two conclusions from this information;
 \begin{enumerate}
 	\item We don't need to recalculate trust values, it's already stored in the database and all we need to get it using neo4j driver.
-	\item Since eigentrust values are community dependent, rather than iterating over customer list and storing all the eigentrust values in a huge matrix, we can iterate over communities and create eigentrust matrix for each community.
+	\item Since eigentrust values are community dependent, rather than iterating over customer list and storing all the eigentrust values in a huge matrix, we can iterate over communities and create eigentrust array for the members of each community.
 \end{enumerate}
-Based on these conclusions, I designed two modules: Recommender and Filterer. The only task of the Recommender is getting recommendations from Filterer module and writing them to database.  The remaining weight of the project is carried by the filter: getting transactions and eigentrust values via neo4j driver, calculating recommendation coefficients for each product, sorting these coefficients and composing recommended items list from k number of products with the highest recommendation coefficients, etc. \\ \\
-For the detailed information and recommender structure, please check section \ref{eigentrust_section} and Figure \ref{fig:eigentrust_structure}.
+Based on these conclusions, I designed two modules: Recommender and Filterer. The only task of the Recommender is getting recommendations from Filterer module and writing them to database.  The remaining weight of the project is carried by the Filterer: getting transactions and eigentrust values via neo4j driver, calculating recommendation coefficients for each product, sorting these coefficients and composing recommended items list from k number of products with the highest recommendation coefficients, etc. \\ \\
+For the detailed information and the recommender structure, please check section \ref{eigentrust_section} and Figure \ref{fig:eigentrust_structure}.
 \subsubsection{For Inverse Distance Weighted Recommender}
-For the detailed information and recommender structure, please check section \ref{inverse_section} and Figure \ref{fig:inverse_structure}.
+"Inverse Distance Weighting" method is inspired by an article\cite{inverse_article} that suggests calculating the trust scores by the reciprocal of their distance on a trust network. Since I worked on datasets with no explicit trust information, I decided to use customer-product records to build my own trust network. \\
+
+So with this approach, In addition to Filterer and Recommender, I implemented the Graph Module which is responsible from building the graph accoring to preferred method (unweighted or euclidean distance weighted) from transaction records and calculating trust scores using the distances between customers in the graph. \\
+
+For the detailed information and the recommender structure, please check section \ref{inverse_section} and Figure \ref{fig:inverse_structure}.

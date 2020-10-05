@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{Neo4j}
 Neo4j.
@@ -41,5 +41,10 @@ Amazon food reviews.
 \newblock In {\em Proceedings of the 12th International Conference on World
   Wide Web\/} (New York, NY, USA, 2003), WWW '03, Association for Computing
   Machinery, p.~640–651.
+
+\bibitem{inverse_article}
+{\sc {Li}, Y., {Liu}, J., {Ren}, J., and {Chang}, Y.}
+\newblock A novel implicit trust recommendation approach for rating prediction.
+\newblock {\em IEEE Access 8\/} (2020), 98305--98315.
 
 \end{thebibliography}

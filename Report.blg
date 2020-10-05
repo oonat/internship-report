@@ -9,45 +9,45 @@ Warning--to sort, need author or key in Numpy
 Warning--to sort, need author or key in Scipy
 Warning--to sort, need author or key in Amazonfoodreviews
 Warning--to sort, need author or key in Surprise
-You've used 9 entries,
+You've used 10 entries,
             2253 wiz_defined-function locations,
-            575 strings with 4888 characters,
-and the built_in function-call counts, 2090 in all, are:
-= -- 198
-> -- 63
+            581 strings with 5042 characters,
+and the built_in function-call counts, 2504 in all, are:
+= -- 237
+> -- 85
 < -- 0
-+ -- 31
-- -- 20
-* -- 104
-:= -- 287
-add.period$ -- 22
-call.type$ -- 9
-change.case$ -- 37
++ -- 41
+- -- 28
+* -- 142
+:= -- 356
+add.period$ -- 25
+call.type$ -- 10
+change.case$ -- 44
 chr.to.int$ -- 0
-cite$ -- 14
-duplicate$ -- 94
-empty$ -- 220
-format.name$ -- 20
-if$ -- 483
+cite$ -- 15
+duplicate$ -- 103
+empty$ -- 251
+format.name$ -- 28
+if$ -- 567
 int.to.chr$ -- 0
-int.to.str$ -- 9
-missing$ -- 2
-newline$ -- 43
-num.names$ -- 8
-pop$ -- 71
+int.to.str$ -- 10
+missing$ -- 3
+newline$ -- 48
+num.names$ -- 10
+pop$ -- 76
 preamble$ -- 1
-purify$ -- 28
+purify$ -- 34
 quote$ -- 0
-skip$ -- 92
+skip$ -- 96
 stack$ -- 0
-substring$ -- 65
-swap$ -- 31
+substring$ -- 104
+swap$ -- 33
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 36
+type$ -- 40
 warning$ -- 5
-while$ -- 9
-width$ -- 10
-write$ -- 78
+while$ -- 12
+width$ -- 12
+write$ -- 88
 (There were 5 warnings)
