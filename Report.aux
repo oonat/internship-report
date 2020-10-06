@@ -62,49 +62,59 @@
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.4.1}About Eigentrust}{8}{subsubsection.2.4.1}}
 \newlabel{about_eigentrust}{{2.4.1}{8}{About Eigentrust}{subsubsection.2.4.1}{}}
 \@writefile{toc}{\contentsline {subparagraph}{Problem encountered with Eigentrust:}{8}{section*.9}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.4.2}Filterer Module}{8}{subsubsection.2.4.2}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.4.3}Recommender Module}{8}{subsubsection.2.4.3}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Distribution of the Eigentrust Values. As can be seen nearly 8000 of the customers have zero eigentrust value.}}{9}{figure.2}}
 \newlabel{fig:eigentrust_distribution_figure}{{2}{9}{Distribution of the Eigentrust Values. As can be seen nearly 8000 of the customers have zero eigentrust value}{figure.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.5}Inverse Distance Weighted Trust Based Recommender}{10}{subsection.2.5}}
-\newlabel{inverse_section}{{2.5}{10}{Inverse Distance Weighted Trust Based Recommender}{subsection.2.5}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Recommender Structure}}{10}{figure.3}}
-\newlabel{fig:inverse_structure}{{3}{10}{Recommender Structure}{figure.3}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.1}Graph Module}{10}{subsubsection.2.5.1}}
-\@writefile{toc}{\contentsline {paragraph}{\numberline {2.5.1.1}Constructing Adjacency Matrix and Distance Matrix}{10}{paragraph.2.5.1.1}}
-\@writefile{toc}{\contentsline {subparagraph}{Proposed Method 1: Unweighted Graph}{10}{section*.10}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.4.2}Filterer Module}{9}{subsubsection.2.4.2}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.4.2.1}Calculating Weights}{9}{paragraph.2.4.2.1}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.4.2.2}Calculating Recommendation Coefficients}{10}{paragraph.2.4.2.2}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.4.2.3}Making Predictions}{10}{paragraph.2.4.2.3}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.4.3}Recommender Module}{10}{subsubsection.2.4.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5}Inverse Distance Weighted Trust Based Recommender}{11}{subsection.2.5}}
+\newlabel{inverse_section}{{2.5}{11}{Inverse Distance Weighted Trust Based Recommender}{subsection.2.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Recommender Structure}}{11}{figure.3}}
+\newlabel{fig:inverse_structure}{{3}{11}{Recommender Structure}{figure.3}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.1}Graph Module}{11}{subsubsection.2.5.1}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.5.1.1}Constructing Adjacency Matrix and Distance Matrix}{11}{paragraph.2.5.1.1}}
+\@writefile{toc}{\contentsline {subparagraph}{Proposed Method 1: Unweighted Graph}{11}{section*.10}}
+\newlabel{prop_method_1}{{2.5.1.1}{11}{Proposed Method 1: Unweighted Graph}{section*.10}{}}
 \citation{Dijkstra}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces $c_{1}$ and $c_{2}$ have purchased at least 1 joint product, but $c_{1}$ and $c_{3}$ do not have a joint product}}{11}{figure.4}}
-\@writefile{toc}{\contentsline {subparagraph}{Proposed Method 2: Euclidean Distance Weighted Graph}{11}{section*.11}}
-\newlabel{eqn:euclidean_distance}{{1}{11}{Proposed Method 2: Euclidean Distance Weighted Graph}{equation.2.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces euclidean distance between $c_{1}$ and $c_{2}$ equals to 3, and $c_{1}$ and $c_{3}$ do not have a joint product}}{11}{figure.5}}
-\citation{Movielens}
-\@writefile{toc}{\contentsline {subparagraph}{Dijkstra's Algorithm}{12}{section*.12}}
-\@writefile{toc}{\contentsline {paragraph}{\numberline {2.5.1.2}Trust Calculation}{12}{paragraph.2.5.1.2}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.2}Filterer Module}{12}{subsubsection.2.5.2}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.3}Recommender Module}{13}{subsubsection.2.5.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.6}Testing Phase}{13}{subsection.2.6}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.1}Methods}{13}{subsubsection.2.6.1}}
-\@writefile{toc}{\contentsline {paragraph}{\numberline {2.6.1.1}Leave-one-out Cross Validation}{13}{paragraph.2.6.1.1}}
-\@writefile{toc}{\contentsline {paragraph}{\numberline {2.6.1.2}K-Fold Cross Validation}{13}{paragraph.2.6.1.2}}
-\@writefile{toc}{\contentsline {paragraph}{\numberline {2.6.1.3}Shuffle Split Cross Validation}{13}{paragraph.2.6.1.3}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.2}Results}{13}{subsubsection.2.6.2}}
-\@writefile{toc}{\contentsline {paragraph}{\numberline {2.6.2.1}Stockmount}{13}{paragraph.2.6.2.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces $c_{1}$ and $c_{2}$ have purchased at least 1 joint product, but $c_{1}$ and $c_{3}$ do not have a joint product}}{12}{figure.4}}
+\@writefile{toc}{\contentsline {subparagraph}{Proposed Method 2: Euclidean Distance Weighted Graph}{12}{section*.11}}
+\newlabel{prop_method_2}{{2.5.1.1}{12}{Proposed Method 2: Euclidean Distance Weighted Graph}{section*.11}{}}
+\newlabel{eqn:euclidean_distance}{{1}{12}{Proposed Method 2: Euclidean Distance Weighted Graph}{equation.2.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces euclidean distance between $c_{1}$ and $c_{2}$ equals to 3, and $c_{1}$ and $c_{3}$ do not have a joint product}}{12}{figure.5}}
+\@writefile{toc}{\contentsline {subparagraph}{Dijkstra's Algorithm}{13}{section*.12}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.5.1.2}Trust Calculation}{13}{paragraph.2.5.1.2}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.2}Filterer Module}{13}{subsubsection.2.5.2}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.5.2.1}Calculating Weights}{14}{paragraph.2.5.2.1}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.5.2.2}Calculating Recommendation Coefficients}{14}{paragraph.2.5.2.2}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.5.2.3}Making Predictions}{14}{paragraph.2.5.2.3}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.3}Recommender Module}{14}{subsubsection.2.5.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6}Testing Phase}{15}{subsection.2.6}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.1}Methods}{15}{subsubsection.2.6.1}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.6.1.1}Leave-one-out Cross Validation}{15}{paragraph.2.6.1.1}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.6.1.2}K-Fold Cross Validation}{15}{paragraph.2.6.1.2}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.6.1.3}Shuffle Split Cross Validation}{15}{paragraph.2.6.1.3}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.2}Results}{15}{subsubsection.2.6.2}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.6.2.1}Stockmount}{15}{paragraph.2.6.2.1}}
 \citation{Movielens}
 \citation{Amazonfoodreviews}
-\@writefile{toc}{\contentsline {paragraph}{\numberline {2.6.2.2}Movielens100k \cite  {Movielens}}{14}{paragraph.2.6.2.2}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.6.2.2}Movielens100k \cite  {Movielens}}{16}{paragraph.2.6.2.2}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.6.2.3}Amazon Food Reviews \cite  {Amazonfoodreviews}}{16}{paragraph.2.6.2.3}}
 \citation{Surprise}
-\@writefile{toc}{\contentsline {paragraph}{\numberline {2.6.2.3}Amazon Food Reviews \cite  {Amazonfoodreviews}}{15}{paragraph.2.6.2.3}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.3}Libraries I Used}{16}{subsubsection.2.6.3}}
-\newlabel{surprise}{{2.6.3.1}{16}{Surprise \cite {Surprise}}{paragraph.2.6.3.1}{}}
-\@writefile{toc}{\contentsline {paragraph}{\numberline {2.6.3.1}Surprise \cite  {Surprise}}{16}{paragraph.2.6.3.1}}
-\@writefile{toc}{\contentsline {subparagraph}{Installation}{16}{section*.13}}
-\@writefile{toc}{\contentsline {subparagraph}{Sample Usage}{16}{section*.14}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {4}Surprise example}{16}{lstlisting.4}}
-\@writefile{toc}{\contentsline {paragraph}{\numberline {2.6.3.2}Matplotlib}{16}{paragraph.2.6.3.2}}
-\@writefile{toc}{\contentsline {subparagraph}{Installation}{16}{section*.15}}
-\@writefile{toc}{\contentsline {subparagraph}{Sample Usage}{16}{section*.16}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {5}Matplotlib example}{16}{lstlisting.5}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.3}Libraries I Used}{17}{subsubsection.2.6.3}}
+\newlabel{surprise}{{2.6.3.1}{17}{Surprise \cite {Surprise}}{paragraph.2.6.3.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.6.3.1}Surprise \cite  {Surprise}}{17}{paragraph.2.6.3.1}}
+\@writefile{toc}{\contentsline {subparagraph}{Installation}{17}{section*.13}}
+\@writefile{toc}{\contentsline {subparagraph}{Sample Usage}{17}{section*.14}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4}Surprise example}{17}{lstlisting.4}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.6.3.2}Matplotlib}{18}{paragraph.2.6.3.2}}
+\@writefile{toc}{\contentsline {subparagraph}{Installation}{18}{section*.15}}
+\@writefile{toc}{\contentsline {subparagraph}{Sample Usage}{18}{section*.16}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {5}Matplotlib example}{18}{lstlisting.5}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Organization}{18}{section.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}METU Data Mining Research Group}{18}{subsection.3.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Conclusion}{18}{section.4}}
 \bibstyle{acm}
 \bibdata{Bibliography.bib}
 \bibcite{Neo4j}{1}
@@ -114,9 +124,6 @@
 \bibcite{Amazonfoodreviews}{5}
 \bibcite{Tacorec}{6}
 \bibcite{Dijkstra}{7}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Organization}{17}{section.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}METU Data Mining Research Group}{17}{subsection.3.1}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Conclusion}{17}{section.4}}
 \bibcite{Movielens}{8}
 \bibcite{Eigentrust}{9}
 \bibcite{inverse_article}{10}

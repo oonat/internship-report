@@ -37,6 +37,7 @@
 	\paragraph{Constructing Adjacency Matrix and Distance Matrix}\mbox{}\\
 	Since the recommender is tested in both the datasets with implicit ratings and explicit ratings, to construct the "adjacency matrix" from customer versus products table, I propose two methods: 
 	\subparagraph{Proposed Method 1: Unweighted Graph}\mbox{}\\
+	\label{prop_method_1}
 	In this method, the "adjacency matrix" is constructed based on whether customers purchased a joint product or not. In other words, edge between two customers can exist if and only if the intersection of the set of products they purchased is not the empty set. This method is proposed for especially the datasets with \textbf{implicit ratings}.
 	\begin{figure}[H]
 		\centering
@@ -55,6 +56,7 @@
 	\textbf{Problem encountered with Proposed Method 1:} During the tests applied on Movielens100k dataset, I observed that although the dataset is sparse, the maximum distance between two users was calculated as 2. Since the distances were distributed in such small range, trust values calculated with this method were not so meaningful. With this observation, I decided to propose another method and use "Unweighted Graph" method in extremely sparse datasets.
 	
 	\subparagraph{Proposed Method 2: Euclidean Distance Weighted Graph}\mbox{}\\
+	\label{prop_method_2}
 	In this method, the "adjacency matrix" is constructed based on the "euclidean distances"\ref{eqn:euclidean_distance} between customers. This method is proposed for especially the datasets with \textbf{explicit ratings}.
 	\begin{equation} 
 	\label{eqn:euclidean_distance}
@@ -94,18 +96,43 @@
 	
 	\textbf{A benefit of the method:} Especially for excessively sparse datasets, recommenders using euclidean distance-based similarity fails since they cannot calculate similarity score for the the customer pairs with no common products.	Since the  "Dijkstra's Algorithm" propagates weights even for the customer pairs with no common products, we are able to calculate trust scores between the customers.
 	
-	\subsubsection{Filterer Module} The module initially takes transaction list and filters it to create denser customer versus product matrix. Then creates a graph object by giving the customer versus product matrix as parameter and use the trust matrix created by the graph object to calculate recommendation coefficient for each product. Finally, for each user, the module sorts all products with respect to their recommendation coefficients in descending order and recommends top k of them.
-	\begin{equation} 
+	\subsubsection{Filterer Module} The Filterer Module is responsible for;
+	\begin{itemize}
+	\item Cleaning/Filtering the provided transaction list (optional)
+	\item Calculating cosine similarities between customers (optional)
+	\item Calculating weights between customers
+	\item If the dataset consists of implicit ratings calculating recommendation coefficients otherwise making predictions for products
+	\item Creating recommended products list based on recommendation coefficient/predictions for each customer
+	\end{itemize}
+
+	\paragraph{Calculating Weights} \mbox{}\\
+	If \ref{prop_method_1} being used,
+	\begin{equation*} 
 	\begin{split}
-	w(c_{1}, c_{2}) = \frac{2*sim(c_{1},c_{2})*trust(c_{2})}{sim(c_{1},c_{2})+trust(c_{2})}
+		w(c_{1}, c_{2}) = \alpha*sim(c_{1},c_{2})+(1-\alpha)*trust(c_{1},c_{2})
 	\end{split}
-	\end{equation}
-	Since the dataset contains implicit feedbacks, I didn't use a predictor algorithm for it. However, for the Movielens 100k dataset\cite{Movielens}, (2) was used to predict the rating given by the $c_{target}$ for item $i$.
-	\begin{equation} 
+	\end{equation*}
+	where $sim(c_{1},c_{2})$ represents "cosine similarity" between customers, $trust(c_{1},c_{2})$ represents trust calculated by the Graph Module and $\alpha$ is a weight ratio that changes according to the dataset .\\ \\
+	Otherwise, $w(c_{1}, c_{2})$ directly equals to $trust(c_{1},c_{2})$ since \ref{prop_method_2} method is already based on similarity.
+
+	\paragraph{Calculating Recommendation Coefficients}
+
+	\begin{equation*} 
 	\begin{split}
-	p(i) = \frac{\sum_{c \in C}^{} w(c_{target}, c)*r_{c}}{\sum_{c \in C}^{} w(c_{target}, c)}
+		RC(i) = \frac{\sum_{c \in C}^{} w(c_{target}, c)*b_{c}}{\sum_{c \in C}^{} w(c_{target}, c)}
 	\end{split}
-	\end{equation}
+	\end{equation*}
+	where $RC(i)$ represents the recommendation coefficient calculated for product $i$ and $b_{c}$ is a boolean value which indicates whether the product was bought by person c or not.
+
+	
+	\paragraph{Making Predictions}
+	\begin{equation*} 
+	\begin{split}
+		p(i) = \frac{\sum_{c \in C}^{} w(c_{target}, c)*r_{c}}{\sum_{c \in C}^{} w(c_{target}, c)}
+	\end{split}
+	\end{equation*}
+	where $p(i)$ represents the prediction for product $i$ and $r_{c}$ represents rating given by customer $c$ for product $i$. $C$ customer set only contains the customers who purchased product i.
+	
 	\subsubsection{Recommender Module} Recommender Module is basically responsible from reading/writing. The module has two tasks:
 	\begin{enumerate}
 		\item Getting transaction list which contains customer id product id pairs from the Neo4j database using neo4j driver and sending the list to the Filterer module as parameter.
