@@ -25,14 +25,14 @@
 	
 	def get_customer_trust(self, customer_id):
 	
-	query = (
-	f"MATCH (u:Customer)-[r:BELONGS_IN]->(:Community) "
-	f"WHERE u.id = {repr(customer_id)} "
-	f"RETURN r.eigentrust"
-	)
+		query = (
+			f"MATCH (u:Customer)-[r:BELONGS_IN]->(:Community) "
+			f"WHERE u.id = {repr(customer_id)} "
+			f"RETURN r.eigentrust"
+		)
 	
-	with self._driver.session() as session:
-	return tuple(session.run(query).single())
+		with self._driver.session() as session:
+			return tuple(session.run(query).single())
 	
 	\end{lstlisting}
 	
@@ -49,18 +49,18 @@
 	class TrustBasedFilterer(object):
 	...
 	
-	def _create_customers_versus_products_table(self):
+		def _create_customers_versus_products_table(self):
 	
-	self._customers_versus_products_table = np.zeros(
-	(self._unique_customers.shape[0],
-	self._unique_products.shape[0]),
-	dtype=np.bool,
-	)
+			self._customers_versus_products_table = np.zeros(
+				(self._unique_customers.shape[0],
+				self._unique_products.shape[0]),
+				dtype=np.bool,
+				)
 	
-	self._customers_versus_products_table[
-	self._sales[:, 0],
-	self._sales[:, 1],
-	] = True
+			self._customers_versus_products_table[
+				self._sales[:, 0],
+				self._sales[:, 1],
+			] = True
 	\end{lstlisting}
 	
 	\subsubsection{Scipy \cite{Scipy}}
@@ -77,20 +77,20 @@
 	class Graph(object):
 	...
 	
-	def _create_distance_matrix(self):
+		def _create_distance_matrix(self):
 	
-	self._create_adjacency_matrix()
+			self._create_adjacency_matrix()
 	
-	self._adjacency_matrix = \
-	csr_matrix(self._adjacency_matrix)
+			self._adjacency_matrix = \
+				csr_matrix(self._adjacency_matrix)
 	
-	self._distance_matrix = dijkstra( 
-	csgraph=self._adjacency_matrix, 
-	directed=False, 
-	return_predecessors=False, 
-	unweighted=True,
-	limit=self._max_distance)
+			self._distance_matrix = dijkstra( 
+				csgraph=self._adjacency_matrix, 
+				directed=False, 
+				return_predecessors=False, 
+				unweighted=True,
+				limit=self._max_distance)
 	
-	self._distance_matrix\ 
-	[~np.isfinite(self._distance_matrix)] = 0
+			self._distance_matrix\ 
+				[~np.isfinite(self._distance_matrix)] = 0
 	\end{lstlisting}
