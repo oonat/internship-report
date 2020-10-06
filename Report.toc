@@ -9,7 +9,7 @@
 \contentsline {subsubsection}{\numberline {2.3.1}Neo4j \cite {Neo4j}}{5}{subsubsection.2.3.1}
 \contentsline {subparagraph}{Driver Installation}{5}{section*.2}
 \contentsline {subparagraph}{Configuration}{5}{section*.3}
-\contentsline {subparagraph}{Sample Usage}{5}{section*.4}
+\contentsline {subparagraph}{Sample Usage}{6}{section*.4}
 \contentsline {subsubsection}{\numberline {2.3.2}Numpy \cite {Numpy}}{6}{subsubsection.2.3.2}
 \contentsline {subparagraph}{Installation}{6}{section*.5}
 \contentsline {subparagraph}{Sample Usage}{6}{section*.6}
@@ -20,7 +20,7 @@
 \contentsline {subsubsection}{\numberline {2.4.1}About Eigentrust}{8}{subsubsection.2.4.1}
 \contentsline {subparagraph}{Problem encountered with Eigentrust:}{8}{section*.9}
 \contentsline {subsubsection}{\numberline {2.4.2}Filterer Module}{9}{subsubsection.2.4.2}
-\contentsline {paragraph}{\numberline {2.4.2.1}Calculating Weights}{9}{paragraph.2.4.2.1}
+\contentsline {paragraph}{\numberline {2.4.2.1}Calculating Weights}{10}{paragraph.2.4.2.1}
 \contentsline {paragraph}{\numberline {2.4.2.2}Calculating Recommendation Coefficients}{10}{paragraph.2.4.2.2}
 \contentsline {paragraph}{\numberline {2.4.2.3}Making Predictions}{10}{paragraph.2.4.2.3}
 \contentsline {subsubsection}{\numberline {2.4.3}Recommender Module}{10}{subsubsection.2.4.3}

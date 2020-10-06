@@ -39,7 +39,7 @@
 
 	\subsubsection{Filterer Module} The Filterer Module is responsible for;
 	\begin{itemize}
-		\item Cleaning/Filtering the provided transaction list (optional)
+		\item Getting transaction/Eigentrust records for each community from the Neo4j database via Neo4j driver
 		\item Calculating cosine similarities between customers in the same community
 		\item Calculating weights between customers in the same community
 		\item If the dataset consists of implicit ratings calculating recommendation coefficients otherwise making predictions for products
@@ -74,8 +74,7 @@
 	
 	\textbf{Important remark:} $C$ community set used in above functions consists only of customers belonged to the same community with $c_{target}$ while there is no such restriction in \ref{inverse_section}.
 
-	\subsubsection{Recommender Module} Recommender Module is basically responsible from reading/writing. The module has two tasks:
+	\subsubsection{Recommender Module} Recommender Module is responsible for reading/writing. The module has two tasks:
 	\begin{enumerate}
-		\item Getting transaction list which contains customer id product id pairs from the Neo4j database using neo4j driver and sending the list to the Filterer module as parameter.
-		\item Getting the recommendation list which contains ids of the customers and corresponding recommended products from the Filterer module and writing these recommendations to Neo4j database as a relationship between the customer and the recommended product using neo4j driver.
+		\item Getting the recommendation list that contains ids of the customers and corresponding recommended products from the Filterer module and writing these recommendations to the Neo4j database as a relationship between the customer and the recommended product using Neo4j driver.
 	\end{enumerate}
