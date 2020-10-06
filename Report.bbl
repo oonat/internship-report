@@ -47,4 +47,18 @@ Amazon food reviews.
 \newblock A novel implicit trust recommendation approach for rating prediction.
 \newblock {\em IEEE Access 8\/} (2020), 98305--98315.
 
+\bibitem{massa_article}
+{\sc Massa, P., and Avesani, P.}
+\newblock Trust-aware recommender systems.
+\newblock In {\em Proceedings of the 2007 ACM Conference on Recommender
+  Systems\/} (New York, NY, USA, 2007), RecSys '07, Association for Computing
+  Machinery, p.~17–24.
+
+\bibitem{papagelis_article}
+{\sc Papagelis, M., Plexousakis, D., and Kutsuras, T.}
+\newblock Alleviating the sparsity problem of collaborative filtering using
+  trust inferences.
+\newblock In {\em Trust Management\/} (Berlin, Heidelberg, 2005), P.~Herrmann,
+  V.~Issarny, and S.~Shiu, Eds., Springer Berlin Heidelberg, pp.~224--239.
+
 \end{thebibliography}
