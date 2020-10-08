@@ -24,11 +24,11 @@
 \citation{Movielens}
 \citation{Amazonfoodreviews}
 \citation{Surprise}
+\citation{Tacorec}
 \citation{Eigentrust}
 \citation{papagelis_article}
 \citation{massa_article}
 \citation{massa_article}
-\citation{Tacorec}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{3}{section.1}}
 \@writefile{toc}{\contentsline {section}{\numberline {2}Project}{3}{section.2}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Analysis Phase}{3}{subsection.2.1}}
@@ -62,8 +62,8 @@
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.4.1}About Eigentrust}{8}{subsubsection.2.4.1}}
 \newlabel{about_eigentrust}{{2.4.1}{8}{About Eigentrust}{subsubsection.2.4.1}{}}
 \@writefile{toc}{\contentsline {subparagraph}{Problem encountered with Eigentrust:}{8}{section*.9}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Distribution of the Eigentrust Values. As can be seen nearly 8000 of the customers have zero eigentrust value.}}{9}{figure.2}}
-\newlabel{fig:eigentrust_distribution_figure}{{2}{9}{Distribution of the Eigentrust Values. As can be seen nearly 8000 of the customers have zero eigentrust value}{figure.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Distribution of the Eigentrust Values before filtering. As can be seen nearly 17500 of the customers have zero eigentrust value.}}{9}{figure.2}}
+\newlabel{fig:eigentrust_distribution_figure}{{2}{9}{Distribution of the Eigentrust Values before filtering. As can be seen nearly 17500 of the customers have zero eigentrust value}{figure.2}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.4.2}Filterer Module}{9}{subsubsection.2.4.2}}
 \@writefile{toc}{\contentsline {paragraph}{\numberline {2.4.2.1}Calculating Weights}{10}{paragraph.2.4.2.1}}
 \@writefile{toc}{\contentsline {paragraph}{\numberline {2.4.2.2}Calculating Recommendation Coefficients}{10}{paragraph.2.4.2.2}}
@@ -101,26 +101,30 @@
 \citation{Amazonfoodreviews}
 \@writefile{toc}{\contentsline {paragraph}{\numberline {2.6.2.2}Movielens100k \cite  {Movielens}}{16}{paragraph.2.6.2.2}}
 \@writefile{toc}{\contentsline {paragraph}{\numberline {2.6.2.3}Amazon Food Reviews \cite  {Amazonfoodreviews}}{16}{paragraph.2.6.2.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces RMSE versus Testset Size. For instance, 0.2 means testset-trainset ratio is $20\%-80\%$ . Additionally, floats in parentheses represent the sparsity of trainset for corresponding test set size}}{18}{figure.6}}
+\newlabel{fig:rmse}{{6}{18}{RMSE versus Testset Size. For instance, 0.2 means testset-trainset ratio is $20\%-80\%$ . Additionally, floats in parentheses represent the sparsity of trainset for corresponding test set size}{figure.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces MAE versus Testset Size}}{18}{figure.7}}
+\newlabel{fig:mae}{{7}{18}{MAE versus Testset Size}{figure.7}{}}
 \citation{Surprise}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.3}Libraries I Used}{17}{subsubsection.2.6.3}}
-\newlabel{surprise}{{2.6.3.1}{17}{Surprise \cite {Surprise}}{paragraph.2.6.3.1}{}}
-\@writefile{toc}{\contentsline {paragraph}{\numberline {2.6.3.1}Surprise \cite  {Surprise}}{17}{paragraph.2.6.3.1}}
-\@writefile{toc}{\contentsline {subparagraph}{Installation}{17}{section*.13}}
-\@writefile{toc}{\contentsline {subparagraph}{Sample Usage}{17}{section*.14}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {4}Surprise example}{17}{lstlisting.4}}
-\@writefile{toc}{\contentsline {paragraph}{\numberline {2.6.3.2}Matplotlib}{18}{paragraph.2.6.3.2}}
-\@writefile{toc}{\contentsline {subparagraph}{Installation}{18}{section*.15}}
-\@writefile{toc}{\contentsline {subparagraph}{Sample Usage}{18}{section*.16}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {5}Matplotlib example}{18}{lstlisting.5}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Organization}{18}{section.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}METU Data Mining Research Group}{18}{subsection.3.1}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Conclusion}{18}{section.4}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.3}Libraries I Used}{19}{subsubsection.2.6.3}}
+\newlabel{surprise}{{2.6.3.1}{19}{Surprise \cite {Surprise}}{paragraph.2.6.3.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.6.3.1}Surprise \cite  {Surprise}}{19}{paragraph.2.6.3.1}}
+\@writefile{toc}{\contentsline {subparagraph}{Installation}{19}{section*.13}}
+\@writefile{toc}{\contentsline {subparagraph}{Sample Usage}{19}{section*.14}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4}Surprise example}{19}{lstlisting.4}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.6.3.2}Matplotlib}{19}{paragraph.2.6.3.2}}
+\@writefile{toc}{\contentsline {subparagraph}{Installation}{19}{section*.15}}
+\@writefile{toc}{\contentsline {subparagraph}{Sample Usage}{19}{section*.16}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {5}Matplotlib example}{19}{lstlisting.5}}
 \bibstyle{acm}
 \bibdata{Bibliography.bib}
 \bibcite{Neo4j}{1}
 \bibcite{Numpy}{2}
 \bibcite{Scipy}{3}
 \bibcite{Surprise}{4}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Organization}{20}{section.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}METU Data Mining Research Group}{20}{subsection.3.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Conclusion}{20}{section.4}}
 \bibcite{Amazonfoodreviews}{5}
 \bibcite{Tacorec}{6}
 \bibcite{Dijkstra}{7}

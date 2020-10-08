@@ -45,13 +45,13 @@
 \contentsline {paragraph}{\numberline {2.6.2.1}Stockmount}{15}{paragraph.2.6.2.1}
 \contentsline {paragraph}{\numberline {2.6.2.2}Movielens100k \cite {Movielens}}{16}{paragraph.2.6.2.2}
 \contentsline {paragraph}{\numberline {2.6.2.3}Amazon Food Reviews \cite {Amazonfoodreviews}}{16}{paragraph.2.6.2.3}
-\contentsline {subsubsection}{\numberline {2.6.3}Libraries I Used}{17}{subsubsection.2.6.3}
-\contentsline {paragraph}{\numberline {2.6.3.1}Surprise \cite {Surprise}}{17}{paragraph.2.6.3.1}
-\contentsline {subparagraph}{Installation}{17}{section*.13}
-\contentsline {subparagraph}{Sample Usage}{17}{section*.14}
-\contentsline {paragraph}{\numberline {2.6.3.2}Matplotlib}{18}{paragraph.2.6.3.2}
-\contentsline {subparagraph}{Installation}{18}{section*.15}
-\contentsline {subparagraph}{Sample Usage}{18}{section*.16}
-\contentsline {section}{\numberline {3}Organization}{18}{section.3}
-\contentsline {subsection}{\numberline {3.1}METU Data Mining Research Group}{18}{subsection.3.1}
-\contentsline {section}{\numberline {4}Conclusion}{18}{section.4}
+\contentsline {subsubsection}{\numberline {2.6.3}Libraries I Used}{19}{subsubsection.2.6.3}
+\contentsline {paragraph}{\numberline {2.6.3.1}Surprise \cite {Surprise}}{19}{paragraph.2.6.3.1}
+\contentsline {subparagraph}{Installation}{19}{section*.13}
+\contentsline {subparagraph}{Sample Usage}{19}{section*.14}
+\contentsline {paragraph}{\numberline {2.6.3.2}Matplotlib}{19}{paragraph.2.6.3.2}
+\contentsline {subparagraph}{Installation}{19}{section*.15}
+\contentsline {subparagraph}{Sample Usage}{19}{section*.16}
+\contentsline {section}{\numberline {3}Organization}{20}{section.3}
+\contentsline {subsection}{\numberline {3.1}METU Data Mining Research Group}{20}{subsection.3.1}
+\contentsline {section}{\numberline {4}Conclusion}{20}{section.4}
