@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.10.12)  8 OCT 2020 03:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.10.12)  9 OCT 2020 01:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -739,7 +739,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--111
 
  []
 
-[3] (./Chapters/4_Design_Phase.tex
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--111
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--111
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--111
+
+ []
+
+[3] (./Chapters/4_Design_Phase.tex [4]
 Underfull \hbox (badness 10000) in paragraph at lines 7--9
 
  []
@@ -749,12 +764,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--11
 
  []
 
-[4]
+
 Underfull \hbox (badness 10000) in paragraph at lines 12--13
 
  []
 
-) (./Chapters/5_Implementation_Phase.tex
+) (./Chapters/5_Implementation_Phase.tex [5]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 2.
@@ -767,7 +782,7 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
-) [5]
+)
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 39.
@@ -777,8 +792,14 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@ifnextchar' on input line 66.
 
-) (./Chapters/6_Eigentrust.tex [7]
-<images/eigentrust_distribution_detailed.png, id=387, 938.7873pt x 490.7133pt>
+[7]) (./Chapters/6_Eigentrust.tex [8pdfTeX warning (ext4): destination with the
+ same identifier (name{figure.1}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.31 	\subparagraph
+                   {Problem encountered with Eigentrust:}]
+<images/eigentrust_distribution_detailed.png, id=395, 938.7873pt x 490.7133pt>
 File: images/eigentrust_distribution_detailed.png Graphic file (type png)
 <use images/eigentrust_distribution_detailed.png>
 Package pdftex.def Info: images/eigentrust_distribution_detailed.png  used on i
@@ -795,60 +816,49 @@ Overfull \hbox (2.65242pt too wide) in paragraph at lines 32--38
 s-pe-cially for the cus-tomers
  []
 
-[8pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) 
-has been already used, duplicate ignored
-
-\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
-                                                  
-l.39 
-     ]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 42.
- (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 42.
+ [9pdfTeX warning (ext4): destination with the same identifier (name{figure.2})
+ has been already used, duplicate ignored
 
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.45 		\item I
+              f the dataset consists of implicit ratings calculating recomme...
+ <./images/eigentrust_distribution_detailed.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 49--50
 
  []
 
-[9pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) 
-has been already used, duplicate ignored
 
-\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
-                                                  
-l.54 	\end{equation*}
-                      <./images/eigentrust_distribution_detailed.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 71--73
 
  []
 
-) (./Chapters/7_Inverse.tex [10] [11pdfTeX warning (ext4): destination with the
- same identifier (name{figure.3}) has been already used, duplicate ignored
+[10]) (./Chapters/7_Inverse.tex [11pdfTeX warning (ext4): destination with the 
+same identifier (name{figure.3}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.54 	\end{figure}
-                  ]
+l.39 	\subparagraph
+                   {Proposed Method 1: Unweighted Graph}\mbox{}\\] [12pdfTeX wa
+rning (ext4): destination with the same identifier (name{figure.4}) has been al
+ready used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.81 
+     ]
 Overfull \hbox (35.43726pt too wide) in paragraph at lines 82--84
 \OT1/cmr/m/n/12 To con-struct the "dis-tance ma-trix", the graph mod-ule uses "
 Di-jk-stra's Algorithm"[[]]
  []
 
-[12pdfTeX warning (ext4): destination with the same identifier (name{figure.4})
- has been already used, duplicate ignored
 
-\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
-                                                  
-l.84 
-     pdfTeX warning (ext4): destination with the same identifier (name{figure.5
-}) has been already used, duplicate ignored
-
-\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
-                                                  
-l.84 
-     ]
 Overfull \hbox (6.59961pt too wide) in paragraph at lines 94--96
 \OT1/cmr/m/n/12 function where $\OML/cmm/m/it/12 d\OT1/cmr/m/n/12 (\OML/cmm/m/i
 t/12 c[]; c[]\OT1/cmr/m/n/12 )$ rep-re-sents the short-est dis-tance be-tween t
@@ -860,7 +870,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 94--96
 
  []
 
-[13]
+[13pdfTeX warning (ext4): destination with the same identifier (name{figure.5})
+ has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.104 	\item I
+              f the dataset consists of implicit ratings calculating recomme...
+]
 Overfull \hbox (10.74979pt too wide) in paragraph at lines 114--117
 \OT1/cmr/m/n/12 where $\OML/cmm/m/it/12 sim\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 c[
 ]; c[]\OT1/cmr/m/n/12 )$ rep-re-sents "co-sine sim-i-lar-ity" be-tween cus-tome
@@ -873,49 +890,47 @@ Underfull \hbox (badness 10000) in paragraph at lines 114--117
 
  []
 
-[14]) (./Chapters/8_Testing_Phase.tex
-Underfull \hbox (badness 10000) in paragraph at lines 22--25
-
- []
-
-[15]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 39.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--62
+[14]) (./Chapters/8_Testing_Phase.tex [15]
+Underfull \hbox (badness 10000) in paragraph at lines 23--26
 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 63.
+(hyperref)                removing `\@ifnextchar' on input line 40.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--83
+Underfull \hbox (badness 10000) in paragraph at lines 60--63
 
  []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@ifnextchar' on input line 64.
 
 [16]
-<images/rmse.png, id=463, 938.7873pt x 484.9317pt>
+Underfull \hbox (badness 10000) in paragraph at lines 80--84
+
+ []
+
+<images/rmse.png, id=466, 938.7873pt x 484.9317pt>
 File: images/rmse.png Graphic file (type png)
 <use images/rmse.png>
-Package pdftex.def Info: images/rmse.png  used on input line 123.
+Package pdftex.def Info: images/rmse.png  used on input line 124.
 (pdftex.def)             Requested size: 394.28798pt x 203.66992pt.
 
-Overfull \hbox (4.28798pt too wide) in paragraph at lines 123--124
+Overfull \hbox (4.28798pt too wide) in paragraph at lines 124--125
  [][] 
  []
 
 [17]
-<images/mae.png, id=468, 938.7873pt x 484.9317pt>
+<images/mae.png, id=471, 938.7873pt x 484.9317pt>
 File: images/mae.png Graphic file (type png)
 <use images/mae.png>
-Package pdftex.def Info: images/mae.png  used on input line 130.
+Package pdftex.def Info: images/mae.png  used on input line 131.
 (pdftex.def)             Requested size: 394.28798pt x 203.66992pt.
 
-Overfull \hbox (4.28798pt too wide) in paragraph at lines 130--131
+Overfull \hbox (4.28798pt too wide) in paragraph at lines 131--132
  [][] 
  []
 
@@ -924,32 +939,32 @@ Overfull \hbox (4.28798pt too wide) in paragraph at lines 130--131
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.138 	\subparagraph
+l.139 	\subparagraph
                     {Installation}:pdfTeX warning (ext4): destination with the 
 same identifier (name{figure.7}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.138 	\subparagraph
+l.139 	\subparagraph
                     {Installation}: <./images/rmse.png> <./images/mae.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 138.
+(hyperref)                removing `\@ifnextchar' on input line 139.
 
 [19]) (./Chapters/9_Organization.tex) (./Chapters/10_Conclusion.tex)
-(./Report.bbl [20]
-Underfull \hbox (badness 10000) in paragraph at lines 20--22
-[]\OT1/cmr/m/n/12 Amazon food re-views.  []$\OT1/cmtt/m/n/12 https : / / snap .
- stanford . edu / data /
+(./Report.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 8--10
+[]\OT1/cmr/m/n/12 Epinions dataset.  []$\OT1/cmtt/m/n/12 https : / / snap . sta
+nford . edu / data /
  []
 
-(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
+[20] (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
-)) [21]
+) [21])
+[22]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 137.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 137.
-
-(./Report.aux (./GradingRubric.aux))
+ (./Report.aux (./GradingRubric.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 137.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 137.
 Package rerunfilecheck Info: File `Report.out' has not changed.
@@ -957,13 +972,13 @@ Package rerunfilecheck Info: File `Report.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 137.
  ) 
 Here is how much of TeX's memory you used:
- 20977 strings out of 494923
- 373452 string characters out of 6180741
- 515972 words of memory out of 5000000
- 23679 multiletter control sequences out of 15000+600000
+ 20982 strings out of 494923
+ 373517 string characters out of 6180741
+ 508049 words of memory out of 5000000
+ 23681 multiletter control sequences out of 15000+600000
  11108 words of font info for 40 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 62i,17n,99p,578b,1967s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,18n,99p,764b,1967s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/tex
@@ -979,10 +994,10 @@ b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Report.pdf (22 pages, 412359 bytes).
+Output written on Report.pdf (23 pages, 415198 bytes).
 PDF statistics:
- 641 PDF objects out of 1000 (max. 8388607)
- 588 compressed objects within 6 object streams
- 222 named destinations out of 1000 (max. 500000)
+ 651 PDF objects out of 1000 (max. 8388607)
+ 597 compressed objects within 6 object streams
+ 225 named destinations out of 1000 (max. 500000)
  361 words of extra memory for PDF output out of 10000 (max. 10000000)
 

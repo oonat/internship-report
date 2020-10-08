@@ -38,7 +38,7 @@
 	Since the recommender is tested in both the datasets with implicit ratings and explicit ratings, to construct the "adjacency matrix" from customer versus products table, I propose two methods: 
 	\subparagraph{Proposed Method 1: Unweighted Graph}\mbox{}\\
 	\label{prop_method_1}
-	In this method, the "adjacency matrix" is constructed based on whether customers purchased a joint product or not. In other words, edge between two customers can exist if and only if the intersection of the set of products they purchased is not the empty set. This method is proposed for especially the datasets with \textbf{implicit ratings}.
+	In this method, the "adjacency matrix" is constructed based on whether customers have a common product or not. In other words, edge between two customers can exist if and only if the intersection of the set of products they purchased is not the empty set. This method is proposed for especially the datasets with \textbf{implicit ratings}.
 	\begin{figure}[H]
 		\centering
 		\begin{tikzpicture}
@@ -50,7 +50,7 @@
 		\path[-] (a) edge (b);
 		\path[-] (b) edge (c);
 		\end{tikzpicture} 
-		\caption{$c_{1}$ and $c_{2}$ have purchased at least 1 joint product, but $c_{1}$ and $c_{3}$ do not have a joint product}
+		\caption{$c_{1}$ and $c_{2}$ have at least one common product while $c_{1}$ and $c_{3}$ do not have a common product}
 	\end{figure}
 
 	\textbf{Problem encountered with Proposed Method 1:} During the tests applied on the Movielens100k dataset, I observed that although the dataset is sparse, the maximum distance between two users was calculated as 2. Since the distances were distributed in such small range, trust values calculated with this method were not so meaningful. With this observation, I decided to propose another method and use the "Unweighted Graph" method in extremely sparse datasets.
@@ -61,10 +61,10 @@
 	\begin{equation} 
 	\label{eqn:euclidean_distance}
 	\begin{split}
-	adj[c_{1}]][c_{2}] = \sqrt{\sum_{i\in I_{1}\cap I{2}}^{} (r1_{i}-r2_{i})^2}
+	adj[c_{1}]][c_{2}] = \frac{\sqrt{\sum_{i\in I_{1}\cap I_{2}}^{} (r1_{i}-r2_{i})^2}}{|I_{1}\cap I_{2}|}
 	\end{split}
 	\end{equation}
-	where $r1_{i}$ and $r2_{i}$ represents ratings given by $c_{1}$ and $c_{2}$ for product $i$. Unlike the commonly used "euclidean distance" calculation, in this method, only ratings given to joint products are included in the calculation.
+	where $r1_{i}$ and $r2_{i}$ represents ratings given by $c_{1}$ and $c_{2}$ for product $i$. Unlike the commonly used "euclidean distance" calculation, in this method, only ratings given to common products are included in the calculation.
 	\begin{figure}[H]
 		\centering
 		\begin{tikzpicture}
@@ -76,7 +76,7 @@
 		\path[-] (a) edge node[above]{3} (b);
 		\path[-] (b) edge node[above]{2} (c);
 		\end{tikzpicture} 
-		\caption{euclidean distance between $c_{1}$ and $c_{2}$ equals to 3, and $c_{1}$ and $c_{3}$ do not have a joint product}
+		\caption{euclidean distance between $c_{1}$ and $c_{2}$ equals to 3, and $c_{1}$ and $c_{3}$ do not have a common product}
 	\end{figure}
 	
 	\subparagraph{Dijkstra's Algorithm}\mbox{}\\

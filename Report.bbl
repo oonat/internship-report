@@ -1,5 +1,13 @@
 \begin{thebibliography}{10}
 
+\bibitem{Amazonfoodreviews}
+Amazon food reviews dataset.
+\newblock \url{https://snap.stanford.edu/data/web-FineFoods.html}.
+
+\bibitem{Epinions}
+Epinions dataset.
+\newblock \url{https://snap.stanford.edu/data/soc-Epinions1.html}.
+
 \bibitem{Neo4j}
 Neo4j.
 \newblock \url{https://neo4j.com/}.
@@ -15,10 +23,6 @@ Scipy library.
 \bibitem{Surprise}
 Surprise library.
 \newblock \url{http://surpriselib.com/}.
-
-\bibitem{Amazonfoodreviews}
-Amazon food reviews.
-\newblock \url{https://snap.stanford.edu/data/web-FineFoods.html}, 2020.
 
 \bibitem{Tacorec}
 {\sc Aksoy, K., Odabas, M., Bozdogan, I., and Temur, A.}
@@ -41,6 +45,11 @@ Amazon food reviews.
 \newblock In {\em Proceedings of the 12th International Conference on World
   Wide Web\/} (New York, NY, USA, 2003), WWW '03, Association for Computing
   Machinery, p.~640–651.
+
+\bibitem{lathia_article}
+{\sc Lathia, N., Hailes, S., and Capra, L.}
+\newblock Trust-based collaborative filtering.
+\newblock vol.~263.
 
 \bibitem{inverse_article}
 {\sc {Li}, Y., {Liu}, J., {Ren}, J., and {Chang}, Y.}
