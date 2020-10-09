@@ -1,7 +1,6 @@
 This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: Report.aux
-A level-1 auxiliary file: GradingRubric.aux
 The style file: acm.bst
 Database file #1: Bibliography.bib.bib
 Warning--to sort, need author or key in Neo4j
@@ -9,12 +8,12 @@ Warning--to sort, need author or key in Numpy
 Warning--to sort, need author or key in Scipy
 Warning--to sort, need author or key in Amazonfoodreviews
 Warning--to sort, need author or key in Surprise
-Warning--to sort, need author or key in Epinions
 Warning--to sort, need author or key in Matplotlib
+Warning--to sort, need author or key in Epinions
 Warning--empty booktitle in lathia_article
 You've used 15 entries,
             2253 wiz_defined-function locations,
-            612 strings with 5853 characters,
+            611 strings with 5836 characters,
 and the built_in function-call counts, 4076 in all, are:
 = -- 387
 > -- 144

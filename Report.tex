@@ -96,8 +96,11 @@
 		Student's Signature \hspace{150px} Organization Approval \\
 	\end{titlepage}
 	
-	\include{GradingRubric}
-	\tableofcontents          
+	\begingroup
+	\hypersetup{hidelinks}
+	\tableofcontents
+	\endgroup
+          
 	\newpage
 	
 	\section{Introduction}
@@ -129,6 +132,9 @@
 	
 	\section{Conclusion}
 	\input{Chapters/10_Conclusion}
+
+	\section{Appendix}
+	\input{Chapters/11_Appendix}
 	
 	\bibliographystyle{acm}
 	\bibliography{Bibliography.bib}

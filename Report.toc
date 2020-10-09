@@ -6,52 +6,54 @@
 \contentsline {subsubsection}{\numberline {2.2.1}For Eigentrust Weighted Recommender}{4}{subsubsection.2.2.1}
 \contentsline {subsubsection}{\numberline {2.2.2}For Inverse Distance Weighted Recommender}{5}{subsubsection.2.2.2}
 \contentsline {subsection}{\numberline {2.3}Implementation Phase}{6}{subsection.2.3}
-\contentsline {subsubsection}{\numberline {2.3.1}Neo4j \cite {Neo4j}}{6}{subsubsection.2.3.1}
-\contentsline {subparagraph}{Driver Installation}{6}{section*.2}
-\contentsline {subparagraph}{Configuration}{6}{section*.3}
-\contentsline {subparagraph}{Sample Usage}{6}{section*.4}
-\contentsline {subsubsection}{\numberline {2.3.2}Numpy \cite {Numpy}}{7}{subsubsection.2.3.2}
-\contentsline {subparagraph}{Installation}{7}{section*.5}
-\contentsline {subparagraph}{Sample Usage}{7}{section*.6}
-\contentsline {subsubsection}{\numberline {2.3.3}Scipy \cite {Scipy}}{8}{subsubsection.2.3.3}
-\contentsline {subparagraph}{Installation}{8}{section*.7}
-\contentsline {subparagraph}{Sample Usage}{8}{section*.8}
-\contentsline {subsection}{\numberline {2.4}Eigentrust Weighted Trust Based Recommender}{9}{subsection.2.4}
-\contentsline {subsubsection}{\numberline {2.4.1}About Eigentrust}{9}{subsubsection.2.4.1}
-\contentsline {subparagraph}{Problem encountered with Eigentrust:}{9}{section*.9}
-\contentsline {subsubsection}{\numberline {2.4.2}Filterer Module}{10}{subsubsection.2.4.2}
-\contentsline {paragraph}{\numberline {2.4.2.1}Calculating Weights}{11}{paragraph.2.4.2.1}
-\contentsline {paragraph}{\numberline {2.4.2.2}Calculating Recommendation Coefficients}{11}{paragraph.2.4.2.2}
-\contentsline {paragraph}{\numberline {2.4.2.3}Making Predictions}{11}{paragraph.2.4.2.3}
-\contentsline {subsubsection}{\numberline {2.4.3}Recommender Module}{11}{subsubsection.2.4.3}
-\contentsline {subsection}{\numberline {2.5}Inverse Distance Weighted Trust Based Recommender}{12}{subsection.2.5}
-\contentsline {subsubsection}{\numberline {2.5.1}Graph Module}{12}{subsubsection.2.5.1}
-\contentsline {paragraph}{\numberline {2.5.1.1}Constructing Adjacency Matrix and Distance Matrix}{12}{paragraph.2.5.1.1}
-\contentsline {subparagraph}{Proposed Method 1: Unweighted Graph}{12}{section*.10}
-\contentsline {subparagraph}{Proposed Method 2: Euclidean Distance Weighted Graph}{13}{section*.11}
-\contentsline {subparagraph}{Dijkstra's Algorithm}{14}{section*.12}
-\contentsline {paragraph}{\numberline {2.5.1.2}Trust Calculation}{14}{paragraph.2.5.1.2}
-\contentsline {subsubsection}{\numberline {2.5.2}Filterer Module}{14}{subsubsection.2.5.2}
-\contentsline {paragraph}{\numberline {2.5.2.1}Calculating Weights}{15}{paragraph.2.5.2.1}
-\contentsline {paragraph}{\numberline {2.5.2.2}Calculating Recommendation Coefficients}{15}{paragraph.2.5.2.2}
-\contentsline {paragraph}{\numberline {2.5.2.3}Making Predictions}{15}{paragraph.2.5.2.3}
-\contentsline {subsubsection}{\numberline {2.5.3}Recommender Module}{15}{subsubsection.2.5.3}
-\contentsline {subsection}{\numberline {2.6}Testing Phase}{16}{subsection.2.6}
-\contentsline {subsubsection}{\numberline {2.6.1}Methods}{16}{subsubsection.2.6.1}
-\contentsline {paragraph}{\numberline {2.6.1.1}Leave-one-out Cross Validation}{16}{paragraph.2.6.1.1}
-\contentsline {paragraph}{\numberline {2.6.1.2}K-Fold Cross Validation}{16}{paragraph.2.6.1.2}
-\contentsline {paragraph}{\numberline {2.6.1.3}Shuffle Split Cross Validation}{16}{paragraph.2.6.1.3}
-\contentsline {subsubsection}{\numberline {2.6.2}Results}{16}{subsubsection.2.6.2}
-\contentsline {paragraph}{\numberline {2.6.2.1}Stockmount}{16}{paragraph.2.6.2.1}
-\contentsline {paragraph}{\numberline {2.6.2.2}Movielens100k \cite {Movielens}}{17}{paragraph.2.6.2.2}
-\contentsline {paragraph}{\numberline {2.6.2.3}Amazon Food Reviews \cite {Amazonfoodreviews}}{17}{paragraph.2.6.2.3}
-\contentsline {subsubsection}{\numberline {2.6.3}Libraries I Used}{20}{subsubsection.2.6.3}
-\contentsline {paragraph}{\numberline {2.6.3.1}Surprise \cite {Surprise}}{20}{paragraph.2.6.3.1}
+\contentsline {subsection}{\numberline {2.4}Eigentrust Weighted Trust Based Recommender}{6}{subsection.2.4}
+\contentsline {subsubsection}{\numberline {2.4.1}About Eigentrust}{6}{subsubsection.2.4.1}
+\contentsline {subparagraph}{Problem encountered with Eigentrust:}{6}{section*.2}
+\contentsline {subsubsection}{\numberline {2.4.2}Filterer Module}{7}{subsubsection.2.4.2}
+\contentsline {paragraph}{\numberline {2.4.2.1}Calculating Weights}{8}{paragraph.2.4.2.1}
+\contentsline {paragraph}{\numberline {2.4.2.2}Calculating Recommendation Coefficients}{8}{paragraph.2.4.2.2}
+\contentsline {paragraph}{\numberline {2.4.2.3}Making Predictions}{8}{paragraph.2.4.2.3}
+\contentsline {subsubsection}{\numberline {2.4.3}Recommender Module}{8}{subsubsection.2.4.3}
+\contentsline {subsection}{\numberline {2.5}Inverse Distance Weighted Trust Based Recommender}{9}{subsection.2.5}
+\contentsline {subsubsection}{\numberline {2.5.1}Graph Module}{9}{subsubsection.2.5.1}
+\contentsline {paragraph}{\numberline {2.5.1.1}Constructing Adjacency Matrix and Distance Matrix}{9}{paragraph.2.5.1.1}
+\contentsline {subparagraph}{Proposed Method 1: Unweighted Graph}{9}{section*.3}
+\contentsline {subparagraph}{Proposed Method 2: Euclidean Distance Weighted Graph}{10}{section*.4}
+\contentsline {subparagraph}{Dijkstra's Algorithm}{11}{section*.5}
+\contentsline {paragraph}{\numberline {2.5.1.2}Trust Calculation}{11}{paragraph.2.5.1.2}
+\contentsline {subsubsection}{\numberline {2.5.2}Filterer Module}{11}{subsubsection.2.5.2}
+\contentsline {paragraph}{\numberline {2.5.2.1}Calculating Weights}{12}{paragraph.2.5.2.1}
+\contentsline {paragraph}{\numberline {2.5.2.2}Calculating Recommendation Coefficients}{12}{paragraph.2.5.2.2}
+\contentsline {paragraph}{\numberline {2.5.2.3}Making Predictions}{12}{paragraph.2.5.2.3}
+\contentsline {subsubsection}{\numberline {2.5.3}Recommender Module}{12}{subsubsection.2.5.3}
+\contentsline {subsection}{\numberline {2.6}Testing Phase}{13}{subsection.2.6}
+\contentsline {subsubsection}{\numberline {2.6.1}Methods}{13}{subsubsection.2.6.1}
+\contentsline {paragraph}{\numberline {2.6.1.1}Leave-one-out Cross Validation}{13}{paragraph.2.6.1.1}
+\contentsline {paragraph}{\numberline {2.6.1.2}K-Fold Cross Validation}{13}{paragraph.2.6.1.2}
+\contentsline {paragraph}{\numberline {2.6.1.3}Shuffle Split Cross Validation}{13}{paragraph.2.6.1.3}
+\contentsline {subsubsection}{\numberline {2.6.2}Results}{13}{subsubsection.2.6.2}
+\contentsline {paragraph}{\numberline {2.6.2.1}Stockmount}{13}{paragraph.2.6.2.1}
+\contentsline {paragraph}{\numberline {2.6.2.2}Movielens100k \cite {Movielens}}{14}{paragraph.2.6.2.2}
+\contentsline {paragraph}{\numberline {2.6.2.3}Amazon Food Reviews \cite {Amazonfoodreviews}}{14}{paragraph.2.6.2.3}
+\contentsline {section}{\numberline {3}Organization}{17}{section.3}
+\contentsline {subsection}{\numberline {3.1}METU Data Mining Research Group}{17}{subsection.3.1}
+\contentsline {section}{\numberline {4}Conclusion}{17}{section.4}
+\contentsline {section}{\numberline {5}Appendix}{17}{section.5}
+\contentsline {subsection}{\numberline {5.1}Libraries used in implementation phase}{17}{subsection.5.1}
+\contentsline {subsubsection}{\numberline {5.1.1}Neo4j \cite {Neo4j}}{17}{subsubsection.5.1.1}
+\contentsline {subparagraph}{Driver Installation}{17}{section*.6}
+\contentsline {subparagraph}{Configuration}{18}{section*.7}
+\contentsline {subparagraph}{Sample Usage}{18}{section*.8}
+\contentsline {subsubsection}{\numberline {5.1.2}Numpy \cite {Numpy}}{18}{subsubsection.5.1.2}
+\contentsline {subparagraph}{Installation}{18}{section*.9}
+\contentsline {subparagraph}{Sample Usage}{19}{section*.10}
+\contentsline {subsubsection}{\numberline {5.1.3}Scipy \cite {Scipy}}{19}{subsubsection.5.1.3}
+\contentsline {subparagraph}{Installation}{19}{section*.11}
+\contentsline {subparagraph}{Sample Usage}{19}{section*.12}
+\contentsline {subsection}{\numberline {5.2}Libraries used in testing phase}{20}{subsection.5.2}
+\contentsline {subsubsection}{\numberline {5.2.1}Surprise \cite {Surprise}}{20}{subsubsection.5.2.1}
 \contentsline {subparagraph}{Installation}{20}{section*.13}
 \contentsline {subparagraph}{Sample Usage}{20}{section*.14}
-\contentsline {paragraph}{\numberline {2.6.3.2}Matplotlib \cite {Matplotlib}}{20}{paragraph.2.6.3.2}
-\contentsline {subparagraph}{Installation}{20}{section*.15}
+\contentsline {subsubsection}{\numberline {5.2.2}Matplotlib \cite {Matplotlib}}{21}{subsubsection.5.2.2}
+\contentsline {subparagraph}{Installation}{21}{section*.15}
 \contentsline {subparagraph}{Sample Usage}{21}{section*.16}
-\contentsline {section}{\numberline {3}Organization}{21}{section.3}
-\contentsline {subsection}{\numberline {3.1}METU Data Mining Research Group}{21}{subsection.3.1}
-\contentsline {section}{\numberline {4}Conclusion}{21}{section.4}
