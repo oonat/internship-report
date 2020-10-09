@@ -1,11 +1,17 @@
-I had the chance to,
+The project proposed two 
+
+I started my internship without any knowledge about recommender systems. Throughout the internship, I experienced the main challenges such as sparsity, scalability, cold start, etc. that recommender systems face with and observe the 
+
+From the technical aspect, by working with Neo4j, I learnt the basics, pros and cons of graph databases. Especially the data visualization feature of Neo4j was really helpful to analyse the dataset. The first versions of the recommenders I implemented were running very slowly due to lots of unnecessary iterations, the solution was performing operations with matrix approach using Numpy. This experience showed me the efficiency of Numpy coming from being written based on C. Since one of the recommenders is graph-based, I got to know python libraries with graph utilities such as Scipy and Scikit-learn.
+
 \begin{itemize}
-	\item recognize the main challenges such as sparsity, scalability, cold start etc. experienced by recommenders 
+	\item experience the main challenges such as sparsity, scalability, cold start, etc. that recommender systems face with.
 	\item experience firsthand which types of algorithms are effective and ineffective in solving which problems 
-	\item use evaluation methods and understanding which method should be used where
+	\item how use evaluation methods and understanding which method should be used where
 \end{itemize}
-For the future,
+For the future works,
 \begin{enumerate}
-	\item Not only customers and products records but extra attributes such as product supplier, platform, product category, seller, store, location, date, etc. can be made part of the system either adding them as nodes to the Graph of Inverse Distance Recommender or using them as an extra filtering layer as in "Hybrid Recommender Systems".
+	\item Not only customer and product records but also extra attributes such as product supplier, platform, product category, seller, store, location, date, etc. can be made part of the system by either adding them as nodes to the Graph of Inverse Distance Recommender or using them as an extra filtering layer as in "Hybrid Recommender Systems".
+	\item effects of different similarity measures (Pearson correlation, Jaccard similarity, etc.) can be tested.
 \end{enumerate}
 Discussions, propagating trust
