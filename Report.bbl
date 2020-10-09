@@ -8,6 +8,10 @@ Amazon food reviews dataset.
 Epinions dataset.
 \newblock \url{https://snap.stanford.edu/data/soc-Epinions1.html}.
 
+\bibitem{Matplotlib}
+Matplotlib library.
+\newblock \url{https://matplotlib.org/}.
+
 \bibitem{Neo4j}
 Neo4j.
 \newblock \url{https://neo4j.com/}.

@@ -49,7 +49,7 @@
 \contentsline {paragraph}{\numberline {2.6.3.1}Surprise \cite {Surprise}}{20}{paragraph.2.6.3.1}
 \contentsline {subparagraph}{Installation}{20}{section*.13}
 \contentsline {subparagraph}{Sample Usage}{20}{section*.14}
-\contentsline {paragraph}{\numberline {2.6.3.2}Matplotlib}{20}{paragraph.2.6.3.2}
+\contentsline {paragraph}{\numberline {2.6.3.2}Matplotlib \cite {Matplotlib}}{20}{paragraph.2.6.3.2}
 \contentsline {subparagraph}{Installation}{20}{section*.15}
 \contentsline {subparagraph}{Sample Usage}{21}{section*.16}
 \contentsline {section}{\numberline {3}Organization}{21}{section.3}
