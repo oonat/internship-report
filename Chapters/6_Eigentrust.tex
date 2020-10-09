@@ -29,11 +29,11 @@
 	\subsubsection{About Eigentrust} \label{about_eigentrust}
 	Eigentrust\cite{Eigentrust} is a reputation calculation algorithm based on the number of positive and negative transactions between customers and mainly designed for peer-to-peer networks. In our case, Eigentrust represents how strongly connected the customers are to their communities. Eigentrust values calculated by the eigentrust module provided by TACoRec\cite{Tacorec} and stored in Neo4j database as a property of the relationship between a customer and his/her community. 
 	\subparagraph{Problem encountered with Eigentrust:}
-	Especially for the customers connected to communities with small size and low densities, eigentrust values stored in the database are either very small or equal to zero (check Figure \ref{fig:eigentrust_distribution_figure}). Most of the customers with zero eigentrust values are eliminated after filtering the network from customers with a small number of products. Unfortunately, eigentrust values are still quite small.
+	Especially for the customers belong to communities with small size and low densities, Eigentrust scores stored in the database were either very small or equal to zero (check Figure \ref{fig:eigentrust_distribution_figure}). Most of the customers with zero Eigentrust were eliminated after filtering the network from customers with a small number of products. Unfortunately, even the filtering did not significantly improve the data.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.42]{eigentrust_distribution_detailed}
-		\caption{Distribution of the Eigentrust Values before filtering. As can be seen nearly 17500 of the customers have zero eigentrust value.}
+		\caption{Distribution of the Eigentrust scores before filtering. As can be seen, nearly 17500 of the customers have zero Eigentrust.}
 		\label{fig:eigentrust_distribution_figure}
 	\end{figure}
 

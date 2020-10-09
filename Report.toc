@@ -13,8 +13,8 @@
 \contentsline {subsubsection}{\numberline {2.3.2}Numpy \cite {Numpy}}{7}{subsubsection.2.3.2}
 \contentsline {subparagraph}{Installation}{7}{section*.5}
 \contentsline {subparagraph}{Sample Usage}{7}{section*.6}
-\contentsline {subsubsection}{\numberline {2.3.3}Scipy \cite {Scipy}}{7}{subsubsection.2.3.3}
-\contentsline {subparagraph}{Installation}{7}{section*.7}
+\contentsline {subsubsection}{\numberline {2.3.3}Scipy \cite {Scipy}}{8}{subsubsection.2.3.3}
+\contentsline {subparagraph}{Installation}{8}{section*.7}
 \contentsline {subparagraph}{Sample Usage}{8}{section*.8}
 \contentsline {subsection}{\numberline {2.4}Eigentrust Weighted Trust Based Recommender}{9}{subsection.2.4}
 \contentsline {subsubsection}{\numberline {2.4.1}About Eigentrust}{9}{subsubsection.2.4.1}
@@ -51,7 +51,7 @@
 \contentsline {subparagraph}{Sample Usage}{20}{section*.14}
 \contentsline {paragraph}{\numberline {2.6.3.2}Matplotlib}{20}{paragraph.2.6.3.2}
 \contentsline {subparagraph}{Installation}{20}{section*.15}
-\contentsline {subparagraph}{Sample Usage}{20}{section*.16}
+\contentsline {subparagraph}{Sample Usage}{21}{section*.16}
 \contentsline {section}{\numberline {3}Organization}{21}{section.3}
 \contentsline {subsection}{\numberline {3.1}METU Data Mining Research Group}{21}{subsection.3.1}
 \contentsline {section}{\numberline {4}Conclusion}{21}{section.4}

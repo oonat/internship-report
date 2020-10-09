@@ -1,5 +1,6 @@
 	Since there are two different implementations, I have divided the implementational details of the recommenders into two subsections: section \ref{eigentrust_section} and \ref{inverse_section}. Under this subsection, libraries and technologies used in implementations are explained.
 	\subsubsection{Neo4j \cite{Neo4j}}
+	Neo4j is a graph database management system where data is organized as nodes, relationships, and properties. The communication between recommender and the database is maintained by Neo4j driver.
 	\subparagraph{Driver Installation}:
 	\begin{lstlisting}[language=bash]
 	pip install neo4j
@@ -37,6 +38,7 @@
 	\end{lstlisting}
 	
 	\subsubsection{Numpy \cite{Numpy}}
+	NumPy is a library for the Python programming language, adding support for large, multi-dimensional arrays and matrices. Since the core of Numpy is optimized C code, performing the calculations in the recommendation process using Numpy matrix provides serious time savings.
 	\subparagraph{Installation}:
 	\begin{lstlisting}[language=bash]
 	pip install numpy
@@ -64,6 +66,7 @@
 	\end{lstlisting}
 	
 	\subsubsection{Scipy \cite{Scipy}}
+	SciPy is a Python library used for scientific computing. Similar to Numpy, many of the Scipy functions are written in C which provides a solution to the slowness caused by interpretation. For this reason, we prefer to use Dijkstra algorithm provided by Scipy rather than implementing by ourselves.
 	\subparagraph{Installation}:
 	\begin{lstlisting}[language=bash]
 	pip install scipy
