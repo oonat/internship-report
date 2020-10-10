@@ -10,47 +10,48 @@ Warning--to sort, need author or key in Scipy
 Warning--to sort, need author or key in Surprise
 Warning--to sort, need author or key in Matplotlib
 Warning--to sort, need author or key in Epinions
+Warning--to sort, need author or key in Smallworld
 Warning--to sort, need author or key in Datamining
 Warning--empty booktitle in lathia_article
-You've used 16 entries,
+You've used 17 entries,
             2253 wiz_defined-function locations,
-            615 strings with 5934 characters,
-and the built_in function-call counts, 4235 in all, are:
-= -- 402
-> -- 145
+            619 strings with 6028 characters,
+and the built_in function-call counts, 4394 in all, are:
+= -- 417
+> -- 146
 < -- 0
-+ -- 66
++ -- 67
 - -- 47
-* -- 239
-:= -- 590
-add.period$ -- 40
-call.type$ -- 16
-change.case$ -- 70
+* -- 244
+:= -- 607
+add.period$ -- 42
+call.type$ -- 17
+change.case$ -- 73
 chr.to.int$ -- 0
-cite$ -- 25
-duplicate$ -- 191
-empty$ -- 422
+cite$ -- 27
+duplicate$ -- 198
+empty$ -- 445
 format.name$ -- 47
-if$ -- 969
+if$ -- 1009
 int.to.chr$ -- 0
-int.to.str$ -- 16
+int.to.str$ -- 17
 missing$ -- 6
-newline$ -- 75
+newline$ -- 79
 num.names$ -- 18
-pop$ -- 126
+pop$ -- 134
 preamble$ -- 1
-purify$ -- 54
+purify$ -- 56
 quote$ -- 0
-skip$ -- 172
+skip$ -- 180
 stack$ -- 0
-substring$ -- 180
-swap$ -- 63
+substring$ -- 185
+swap$ -- 64
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 64
-warning$ -- 9
+type$ -- 68
+warning$ -- 10
 while$ -- 23
-width$ -- 18
-write$ -- 141
-(There were 9 warnings)
+width$ -- 19
+write$ -- 148
+(There were 10 warnings)

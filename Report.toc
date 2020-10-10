@@ -43,7 +43,7 @@
 \contentsline {subsubsection}{\numberline {5.1.1}Neo4j \cite {Neo4j}}{18}{subsubsection.5.1.1}
 \contentsline {subparagraph}{Driver Installation}{18}{section*.6}
 \contentsline {subparagraph}{Configuration}{18}{section*.7}
-\contentsline {subparagraph}{Sample Usage}{18}{section*.8}
+\contentsline {subparagraph}{Sample Usage}{19}{section*.8}
 \contentsline {subsubsection}{\numberline {5.1.2}Numpy \cite {Numpy}}{19}{subsubsection.5.1.2}
 \contentsline {subparagraph}{Installation}{19}{section*.9}
 \contentsline {subparagraph}{Sample Usage}{19}{section*.10}
@@ -54,6 +54,6 @@
 \contentsline {subsubsection}{\numberline {5.2.1}Surprise \cite {Surprise}}{21}{subsubsection.5.2.1}
 \contentsline {subparagraph}{Installation}{21}{section*.13}
 \contentsline {subparagraph}{Sample Usage}{21}{section*.14}
-\contentsline {subsubsection}{\numberline {5.2.2}Matplotlib \cite {Matplotlib}}{21}{subsubsection.5.2.2}
+\contentsline {subsubsection}{\numberline {5.2.2}Matplotlib \cite {Matplotlib}}{22}{subsubsection.5.2.2}
 \contentsline {subparagraph}{Installation}{22}{section*.15}
 \contentsline {subparagraph}{Sample Usage}{22}{section*.16}

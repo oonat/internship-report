@@ -53,7 +53,7 @@
 		\caption{$c_{1}$ and $c_{2}$ have at least one common product while $c_{1}$ and $c_{3}$ do not have a common product}
 	\end{figure}
 
-	\textbf{Problem encountered with Proposed Method 1:} During the tests performed on the Movielens100k dataset, I observed that although the dataset is sparse, the maximum distance between two users was calculated as 2. Since the distances were distributed in such small range, trust values calculated with this method were not so meaningful. With this observation, I decided to propose another method and use the "Unweighted Graph" method in extremely sparse datasets.
+	\textbf{Problem encountered with Proposed Method 1:} During the tests performed on the Movielens100k dataset, I observed that although the dataset is sparse, the maximum distance between two customers was calculated as 2. In other words, the graph was kind of a "Small-world Network"\cite{Smallworld}. Since the distances were distributed in such small range, trust values calculated with this method were not so meaningful. With this observation, I decided to propose another method and use the "Unweighted Graph" method in extremely sparse datasets.
 	
 	\subparagraph{Proposed Method 2: Euclidean Distance Weighted Graph}\mbox{}\\
 	\label{prop_method_2}

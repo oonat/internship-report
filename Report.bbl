@@ -28,6 +28,10 @@ Numpy library.
 Scipy library.
 \newblock \url{https://www.scipy.org/}.
 
+\bibitem{Smallworld}
+Small-world network.
+\newblock \url{https://en.wikipedia.org/wiki/Small-world_network}.
+
 \bibitem{Surprise}
 Surprise library.
 \newblock \url{http://surpriselib.com/}.
