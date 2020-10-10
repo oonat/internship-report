@@ -1,7 +1,6 @@
 	Although there are many factors such as diversity, coverage, serendipity that determine the efficiency of recommendation systems, in this project we focused on accuracy and decided to left other factors beyond the scope.
 	\subsubsection{Methods}
 	\paragraph{Leave-one-out Cross Validation}
-	\paragraph{K-Fold Cross Validation}
 	\paragraph{Shuffle Split Cross Validation}
 	\subsubsection{Results}
 	\paragraph{Stockmount} \mbox{}\\
@@ -15,12 +14,14 @@
 			\hline
 			Number of Products & \\  
 			\hline
+			Number of Communities & 175\\  
+			\hline
 			Sparsity & 99.808124 \% \\   
 			\hline
 		\end{tabular}
 	\end{center} 
 	\vspace{0.5cm}
-	\textbf{Testing method:} Since the dataset contains implicit ratings, I preferred to use "Hit Rate" rather than RMSE or MAE as the test metric and "Leave-one-out CV" as the cross validation iterator. Basically, for each deleted transaction, test module checked whether the product of the deleted transaction is within the recommended products.\\
+	\textbf{Testing method:} Since the dataset contains implicit ratings, I preferred to use "Hit Rate" rather than RMSE or MAE as the test metric and "Leave-one-out CV" as the cross validation iterator. Basically, for each deleted transaction, test module checked whether the product in the deleted transaction was within the recommended products.\\
 	\textbf{Tested Recommender:} Eigentrust Weighted Trust Based Recommender \ref{eigentrust_section} \\ \\
 	\textbf{Results:}
 	\begin{center}
@@ -36,30 +37,7 @@
 			\hline
 		\end{tabular}
 	\end{center} 
-
-	\paragraph{Movielens100k \cite{Movielens}} \mbox{}\\
-	\textbf{About the dataset:} 
-	\begin{center}
-		\begin{tabular}{ | c | c |}
-			\hline
-			&Movielens 100k  \\  
-			\hline
-			Number of ratings  & 100.000  \\   
-			\hline
-			Number of users & 943 \\
-			\hline
-			Number of movies & 1682 \\
-			\hline
-			Rating range & 1-5 \\
-			\hline
-			Sparsity & 93.6953 \% \\
-			\hline
-		\end{tabular}
-	\end{center} 
-	\vspace{0.5cm}
-	\textbf{Testing method:} I preferred to use RMSE and MAE as the test metric and "K-Fold CV" as the cross validation iterator. Tests were done using Surprise \ref{surprise}.\\
-	\textbf{Tested Recommender:} Inverse Distance Weighted Trust Based Recommender \ref{inverse_section} \\ \\
-	\textbf{Results:}
+	Results were analysed on the basis of community density, community size and number of products purchased by the customer, but no solid correlation with accuracy found.
 	
 	\paragraph{Amazon Food Reviews \cite{Amazonfoodreviews}} \mbox{}\\
 	\textbf{About the dataset:} 
@@ -77,46 +55,111 @@
 		\end{tabular}
 	\end{center} 
 	\vspace{0.5cm}
-	\textbf{Testing method:} For this dataset, I wanted to see how efficiently the recommender works on extremely sparse datasets, as a result I prefered to use "Shuffle Split CV" as the cross validation iterator since it is easy to set up the test and train set ratios. For the test metric, RMSE and MAE were used. Tests were done using Surprise \ref{surprise}.\\
-	\textbf{Tested Recommender:} Inverse Distance Weighted Trust Based Recommender \ref{inverse_section} \\ \\
+	\textbf{Testing method:} For this dataset, I wanted to see how efficiently the recommender works on extremely sparse datasets, as a result I preferred to use "Shuffle Split CV" as the cross validation iterator since it is easy to set up the test and train set ratios. The tests with the test set size greater than 0.5 were applied to see the performance of the implemented recommender in cold start and to understand how it improved the collaborative filtering method using the "mean squared difference similarity". As the test metrics, RMSE and MAE were used. Tests were performed using Surprise.\\
+	\textbf{Tested Recommender:} Inverse Distance Weighted Trust Based Recommender (with the Proposed Method 2)\ref{inverse_section} \\ \\
 	\textbf{Benchmark:} \\
-	\textbf{Number of Splits: 3, Trainset: 0.5, Testset: 0.5, Sparsity: 0.9931}
+	\textbf{Testset: 0.2, Trainset: 0.8, Sparsity: 0.9891}
 	\begin{center}
-		\begin{tabular}{ | c | c | c | c | c | c | c |}
+		\begin{tabular}{ | c | c | c | c | c | c | c | c |}
 			\hline
-			& Trust Based & MSD & SVD & Slope One & KNN &  NMF\\ 
+			& Trust Based & MSD & SVD & Slope One & KNN & NMF & CoCluster\\ 
 			\hline
-			RMSE& 0.7411 & 0.7898&0.8152  & 0.7553& 0.7679&0.7516\\
+			RMSE&0.6727  & 0.6443  & 0.6944  & 0.7167  & 0.6615  & 0.6661  & 0.7199\\
 			\hline
-			MAE&0.3996 & 0.4037&0.61073 &0.4264  &0.4902 &0.4832\\
+			MAE&0.3321  & 0.3089  & 0.471  & 0.4049  & 0.395  & 0.4131  & 0.4441\\
 			\hline
 		\end{tabular}
 	\end{center} 
 	\vspace{1cm}
-	\textbf{Number of Splits: 3, Trainset: 0.2, Testset: 0.8, Sparsity: 0.997}
+	\textbf{Testset: 0.3, Trainset: 0.7, Sparsity: 0.9904}
 	\begin{center}
-		\begin{tabular}{ | c | c | c | c | c | c | c |}
-			\hline
-			& Trust Based & MSD & SVD & Slope One & KNN & NMF\\ 
-			\hline
-			RMSE& 0.9766& 1.551& 1.0252&0.9045 & 1.0501& 0.9659\\
-			\hline
-			MAE& 0.6321& 0.9870& 0.8062&0.5104 & 0.7172& 0.6932\\
-			\hline
-		\end{tabular}
+	\begin{tabular}{ | c | c | c | c | c | c | c | c |}
+		\hline
+		& Trust Based & MSD & SVD & Slope One & KNN & NMF & CoCluster\\ 
+		\hline
+		RMSE&0.672  & 0.6599  & 0.7252  & 0.7226  & 0.6906  & 0.6852  & 0.7133\\
+		\hline
+		MAE&0.3375  & 0.3239  & 0.5081  & 0.4074  & 0.4203  & 0.4308  & 0.415\\
+		\hline
+	\end{tabular}
 	\end{center} 
 	\vspace{1cm}
-	\textbf{Number of Splits: 3, Trainset: 0.1, Testset: 0.9, Sparsity: 0.998}
+	\textbf{Testset: 0.4, Trainset: 0.6, Sparsity: 0.9918}
 	\begin{center}
-		\begin{tabular}{ | c | c | c | c | c | c | c |}
-			\hline
-			& Trust Based & MSD & SVD & Slope One & KNN & NMF\\ 
-			\hline
-			RMSE& 1.275& 2.2077& 1.1096&1.015 & 1.2562& 1.1271\\
-			\hline
-			MAE& 0.8909 &1.6566 & 0.8806&0.6178 & 0.9067&0.8613\\
-			\hline
-		\end{tabular}
+	\begin{tabular}{ | c | c | c | c | c | c | c | c |}
+		\hline
+		& Trust Based & MSD & SVD & Slope One & KNN & NMF & CoCluster\\ 
+		\hline
+		RMSE&0.7012  & 0.7211  & 0.7633  & 0.7396  & 0.7231  & 0.7086  & 0.7156\\
+		\hline
+		MAE&0.3636  & 0.3594  & 0.5548  & 0.4146  & 0.4458  & 0.4491  & 0.4232\\
+		\hline
+	\end{tabular}
+	\end{center} 
+	\vspace{1cm}
+	\textbf{Testset: 0.5, Trainset: 0.5, Sparsity: 0.9931}
+	\begin{center}
+	\begin{tabular}{ | c | c | c | c | c | c | c | c |}
+		\hline
+		& Trust Based & MSD & SVD & Slope One & KNN & NMF & CoCluster\\ 
+		\hline
+		RMSE&0.7331  & 0.7784  & 0.8212  & 0.7648  & 0.7562  & 0.7447  & 0.7624\\
+		\hline
+		MAE&0.3975  & 0.3971  & 0.6144  & 0.429  & 0.4835  & 0.4848  & 0.463\\
+		\hline
+	\end{tabular}
+	\end{center} 
+	\vspace{1cm}
+	\textbf{Testset: 0.6, Trainset: 0.4, Sparsity: 0.9945}
+	\begin{center}
+	\begin{tabular}{ | c | c | c | c | c | c | c | c |}
+		\hline
+		& Trust Based & MSD & SVD & Slope One & KNN & NMF & CoCluster\\ 
+		\hline
+		RMSE&0.7719  & 0.91  & 0.8787  & 0.7879  & 0.8241  & 0.7949  & 0.7545\\
+		\hline
+		MAE&0.4382  & 0.481  & 0.676  & 0.4437  & 0.5419  & 0.5217  & 0.4422\\
+		\hline
+	\end{tabular}
+	\end{center} 
+	\vspace{1cm}
+	\textbf{Testset: 0.7, Trainset: 0.3, Sparsity: 0.9958}
+	\begin{center}
+	\begin{tabular}{ | c | c | c | c | c | c | c | c |}
+		\hline
+		& Trust Based & MSD & SVD & Slope One & KNN & NMF & CoCluster\\ 
+		\hline
+		RMSE&0.8671  & 1.1469  & 0.9456  & 0.8266  & 0.9157  & 0.863  & 0.8238\\
+		\hline
+		MAE&0.5186  & 0.6468  & 0.739  & 0.4611  & 0.6179  & 0.5848  & 0.5065\\
+		\hline
+	\end{tabular}
+	\end{center} 
+	\vspace{1cm}
+	\textbf{Testset: 0.8, Trainset: 0.2, Sparsity: 0.9970}
+	\begin{center}
+	\begin{tabular}{ | c | c | c | c | c | c | c | c |}
+		\hline
+		& Trust Based & MSD & SVD & Slope One & KNN & NMF & CoCluster\\ 
+		\hline
+		RMSE&0.9893  & 1.5542  & 1.0201  & 0.9124  & 1.0562  & 0.9721  & 0.877\\
+		\hline
+		MAE&0.6396  & 0.9878  & 0.8088  & 0.5124  & 0.7207  & 0.7005  & 0.5391\\
+		\hline
+	\end{tabular}
+	\end{center} 
+	\vspace{1cm}
+	\textbf{Testset: 0.9, Trainset: 0.1, Sparsity: 0.9979}
+	\begin{center}
+	\begin{tabular}{ | c | c | c | c | c | c | c | c |}
+		\hline
+		& Trust Based & MSD & SVD & Slope One & KNN & NMF & CoCluster\\ 
+		\hline
+		RMSE&1.2693  & 2.2067  & 1.106  & 1.0236  & 1.2687  & 1.1095  & 1.0273\\
+		\hline
+		MAE&0.8898  & 1.6609  & 0.8843  & 0.615  & 0.919  & 0.8506  & 0.6876\\
+		\hline
+	\end{tabular}
 	\end{center} 
 
 \begin{figure}[H]
