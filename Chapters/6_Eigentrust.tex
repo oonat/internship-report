@@ -27,9 +27,9 @@
 		\label{fig:eigentrust_structure}
 	\end{figure}
 	\subsubsection{About Eigentrust} \label{about_eigentrust}
-	Eigentrust\cite{Eigentrust} is a reputation calculation algorithm based on the number of positive and negative transactions between customers and mainly designed for peer-to-peer networks. In our case, Eigentrust represents how strongly connected the customers are to their communities. Eigentrust values calculated by the eigentrust module provided by TACoRec\cite{Tacorec} and stored in Neo4j database as a property of the relationship between a customer and his/her community. 
+	Eigentrust\cite{Eigentrust} is a reputation calculation algorithm based on the number of positive and negative transactions between customers and mainly designed for peer-to-peer networks. In our case, Eigentrust represents how strongly connected the customers are to their communities. Eigentrust values calculated by using the eigentrust module provided by TACoRec and stored in Neo4j database as a property of the relationship between a customer and his/her community. 
 	\subparagraph{Problem encountered with Eigentrust:}
-	Especially for the customers belong to communities with small size and low densities, Eigentrust scores stored in the database were either very small or equal to zero (check Figure \ref{fig:eigentrust_distribution_figure}). Most of the customers with zero Eigentrust were eliminated after filtering the network from customers with a small number of products. Unfortunately, even the filtering did not significantly improve the data.
+	Especially for the customers belong to communities with small size and low densities, Eigentrust scores stored in the database were either very small or equal to zero (check Figure \ref{fig:eigentrust_distribution_figure}). Most of the customers with zero Eigentrust were eliminated after filtering the network from customers with a small number of products. Unfortunately, even the filtering couldn't significantly improve the situation.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.42]{eigentrust_distribution_detailed}
@@ -60,7 +60,7 @@
 	RC(i) = \frac{\sum_{c \in C}^{} w_{c_{target}}(c)*b_{c}}{\sum_{c \in C}^{} w_{c_{target}}(c)}
 	\end{split}
 	\end{equation*}
-	where $RC(i)$ represents the recommendation coefficient calculated for product $i$ and $b_{c}$ is a boolean value which indicates whether the product was bought by person c or not.
+	where $RC(i)$ represents the recommendation coefficient calculated for product $i$ and $b_{c}$ is a boolean value which indicates whether the product was purchased by the customer c or not.
 
 
 	\paragraph{Making Predictions}
@@ -71,7 +71,7 @@
 	\end{equation*}
 	where $p(i)$ represents the prediction for product $i$ and $r_{c}$ represents rating given by customer $c$ for product $i$. $C$ customer set only contains the customers who purchased product i. \\
 	
-	\textbf{Important remark:} $C$ customer set used in above functions consists only of customers belonged to the same community with $c_{target}$ while there is no such restriction in \ref{inverse_section}.
+	\textbf{Important remark:} $C$ customer set used in functions given above consists only of customers belonged to the same community with $c_{target}$ while there is no such restriction in \ref{inverse_section}.
 
 	\subsubsection{Recommender Module} Recommender Module is responsible for writing. The module has two tasks:
 	\begin{enumerate}

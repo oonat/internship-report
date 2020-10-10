@@ -31,11 +31,11 @@
 	\subsubsection{Graph Module} Graph Module is responsible for three tasks:
 	\begin{enumerate}
 		\item Constructing "adjacency matrix" from "customer versus product table" provided by Filterer module
-		\item Constructing "distance matrix" using "adjacency matrix"
-		\item Constructing "trust matrix" using "distance matrix"
+		\item Constructing "distance matrix" by performing Dijkstra's algorithm on the "adjacency matrix"
+		\item Constructing "trust matrix" by taking the reciprocal of the "distance matrix"
 	\end{enumerate}
 	\paragraph{Constructing Adjacency Matrix and Distance Matrix}\mbox{}\\
-	Since the recommender is tested in both the datasets with implicit ratings and explicit ratings, to construct the "adjacency matrix" from customer versus products table, I propose two methods: 
+	Since the recommender is tested on both the datasets with implicit ratings and explicit ratings, to construct the "adjacency matrix" from customer versus products table, I propose two methods: 
 	\subparagraph{Proposed Method 1: Unweighted Graph}\mbox{}\\
 	\label{prop_method_1}
 	In this method, the "adjacency matrix" is constructed based on whether customers have a common product or not. In other words, edge between two customers can exist if and only if the intersection of the set of products they purchased is not the empty set. This method is proposed for especially the datasets with \textbf{implicit ratings}.
