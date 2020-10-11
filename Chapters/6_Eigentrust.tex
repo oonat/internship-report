@@ -27,24 +27,43 @@
 		\label{fig:eigentrust_structure}
 	\end{figure}
 	\subsubsection{About Eigentrust} \label{about_eigentrust}
-	Eigentrust\cite{Eigentrust} is a reputation calculation algorithm based on the number of positive and negative transactions between customers and mainly designed for peer-to-peer networks. In our case, Eigentrust represents how strongly connected the customers are to their communities. Eigentrust values calculated by using the eigentrust module provided by TACoRec and stored in Neo4j database as a property of the relationship between a customer and his/her community. 
+	Eigentrust\cite{Eigentrust} is a reputation calculation algorithm based on the number of positive and negative transactions between customers and mainly designed for peer-to-peer networks. In our case, Eigentrust represents how strongly connected the customers are to their communities. Eigentrust scores calculated by using the eigentrust module provided by TACoRec and stored in Neo4j database as a property of the relationship between a customer and his/her community. 
 	\subparagraph{Problem encountered with Eigentrust:}
-	Especially for the customers belong to communities with small size and low densities, Eigentrust scores stored in the database were either very small or equal to zero (check Figure \ref{fig:eigentrust_distribution_figure}). Most of the customers with zero Eigentrust were eliminated after filtering the network from customers with a small number of products. Unfortunately, even the filtering couldn't significantly improve the situation.
-	\begin{figure}[H]
-		\centering
-		\includegraphics[scale=0.42]{eigentrust_distribution_detailed}
-		\caption{Distribution of the Eigentrust scores before filtering. As can be seen, nearly 17500 of the customers have zero Eigentrust.}
-		\label{fig:eigentrust_distribution_figure}
-	\end{figure}
+	Especially for the customers belong to communities with small size and low densities, Eigentrust scores stored in the database were either very small or equal to zero (check Figure \ref{fig:eigentrust_distribution_figure}). Most of the customers with zero Eigentrust were eliminated after filtering the network from customers with a small number of products. Unfortunately, even the filtering couldn't significantly improve the situation. Distribution of the Eigentrust scores before and after the filtering, can be found in \ref{eigentrust_distribution_section}
 
 	\subsubsection{Filterer Module} The Filterer Module is responsible for;
 	\begin{itemize}
 		\item Getting transaction/Eigentrust records for each community from the Neo4j database via Neo4j driver
-		\item Calculating cosine similarities between customers in the same community
-		\item Calculating weights between customers in the same community
+		\item Calculating cosine similarities between customers
+		\item Calculating weights
 		\item If the dataset consists of implicit ratings calculating recommendation coefficients otherwise making predictions for products
-		\item Selecting k-products with the highest coefficients/predictions to recommend for each customer
+		\item Selecting k products with the highest coefficients/predictions to recommend for each customer
 	\end{itemize}
+	{
+		\center
+		\begin{algorithm}[H]
+			\NoCaptionOfAlgo
+			\SetAlgoLined
+			\ForEach{community i}{
+				get transactions and eigentrusts of the customers belong to the i\;
+				construct customers versus products matrix using transactions\;
+				construct trust matrix using the eigentrusts\;
+				construct similarity matrix based on cosine similarity between customers belonged to the i\;
+				construct weight matrix using the trust and similarity matrices\;
+				\For{customer c belong to i}{
+					\ForEach{product p purchased by neighbours}{
+						\If{c purchased p}{
+						continue;
+						}\Else{
+						calculate recommendation coefficient using the weight and customers versus products matrices for p\;
+						}
+					}
+					recommend k products with the highest recommendation coefficients\;
+				}
+			}
+			\caption{Pseudocode for the Filterer}
+		\end{algorithm}
+	}
 
 	\paragraph{Calculating Weights} \mbox{}\\
 	\begin{equation*} 
@@ -73,7 +92,4 @@
 	
 	\textbf{Important remark:} $C$ customer set used in functions given above consists only of customers belonged to the same community with $c_{target}$ while there is no such restriction in \ref{inverse_section}.
 
-	\subsubsection{Recommender Module} Recommender Module is responsible for writing. The module has two tasks:
-	\begin{enumerate}
-		\item Getting the recommendation list that contains ids of the customers and corresponding recommended products from the Filterer module and writing these recommendations to the Neo4j database as a relationship between the customer and the recommended product using Neo4j driver.
-	\end{enumerate}
+	\subsubsection{Recommender Module} Recommender Module is responsible for getting the recommendation list that contains ids of the customers and corresponding recommended products from the Filterer module and writing these recommendations to the Neo4j database as a relationship between the customer and the recommended product using Neo4j driver.

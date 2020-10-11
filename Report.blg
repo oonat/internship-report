@@ -3,55 +3,46 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: Report.aux
 The style file: acm.bst
 Database file #1: Bibliography.bib.bib
-Warning--to sort, need author or key in Amazonfoodreviews
-Warning--to sort, need author or key in Neo4j
-Warning--to sort, need author or key in Numpy
-Warning--to sort, need author or key in Scipy
-Warning--to sort, need author or key in Surprise
-Warning--to sort, need author or key in Matplotlib
-Warning--to sort, need author or key in Epinions
-Warning--to sort, need author or key in Smallworld
-Warning--to sort, need author or key in Datamining
 Warning--empty booktitle in lathia_article
-You've used 17 entries,
+You've used 8 entries,
             2253 wiz_defined-function locations,
-            619 strings with 6028 characters,
-and the built_in function-call counts, 4394 in all, are:
-= -- 417
-> -- 146
+            584 strings with 5483 characters,
+and the built_in function-call counts, 3279 in all, are:
+= -- 312
+> -- 158
 < -- 0
-+ -- 67
-- -- 47
-* -- 244
-:= -- 607
-add.period$ -- 42
-call.type$ -- 17
-change.case$ -- 73
++ -- 64
+- -- 54
+* -- 223
+:= -- 494
+add.period$ -- 23
+call.type$ -- 8
+change.case$ -- 48
 chr.to.int$ -- 0
-cite$ -- 27
-duplicate$ -- 198
-empty$ -- 445
-format.name$ -- 47
-if$ -- 1009
+cite$ -- 9
+duplicate$ -- 150
+empty$ -- 261
+format.name$ -- 54
+if$ -- 724
 int.to.chr$ -- 0
-int.to.str$ -- 17
+int.to.str$ -- 8
 missing$ -- 6
-newline$ -- 79
-num.names$ -- 18
-pop$ -- 134
+newline$ -- 42
+num.names$ -- 20
+pop$ -- 68
 preamble$ -- 1
-purify$ -- 56
+purify$ -- 40
 quote$ -- 0
-skip$ -- 180
+skip$ -- 122
 stack$ -- 0
-substring$ -- 185
-swap$ -- 64
+substring$ -- 171
+swap$ -- 63
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 68
-warning$ -- 10
-while$ -- 23
-width$ -- 19
-write$ -- 148
-(There were 10 warnings)
+type$ -- 32
+warning$ -- 1
+while$ -- 27
+width$ -- 9
+write$ -- 87
+(There was 1 warning)

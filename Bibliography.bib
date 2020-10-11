@@ -82,17 +82,28 @@ series = {RecSys '07}
 author = {Lathia, Neal and Hailes, Stephen and Capra, Licia},
 year = {2008},
 month = {06},
-pages = {},
 title = {Trust-Based Collaborative Filtering},
 volume = {263},
 journal = {International Federation for Information Processing Digital Library; Trust Management II;},
 doi = {10.1007/978-0-387-09428-1_8}
 }
 
-@misc{Epinions,
-title = {Epinions Dataset},
-howpublished = {\url{https://snap.stanford.edu/data/soc-Epinions1.html}},
-},
+@InProceedings{Epinions,
+author="Richardson, Matthew
+and Agrawal, Rakesh
+and Domingos, Pedro",
+editor="Fensel, Dieter
+and Sycara, Katia
+and Mylopoulos, John",
+title="Trust Management for the Semantic Web",
+booktitle="The Semantic Web - ISWC 2003",
+year="2003",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="351--368",
+abstract="Though research on the Semantic Web has progressed at a steady pace, its promise has yet to be realized. One major difficulty is that, by its very nature, the Semantic Web is a large, uncensored system to which anyone may contribute. This raises the question of how much credence to give each source. We cannot expect each user to know the trustworthiness of each source, nor would we want to assign top-down or global credibility values due to the subjective nature of trust. We tackle this problem by employing a web of trust, in which each user maintains trusts in a small number of other users. We then compose these trusts into trust values for all other users. The result of our computation is not an agglomerate ``trustworthiness`` of each user. Instead, each user receives a personalized set of trusts, which may vary widely from person to person. We define properties for combination functions which merge such trusts, and define a class of functions for which merging may be done locally while maintaining these properties. We give examples of specific functions and apply them to data from Epinions and our BibServ bibliography server. Experiments confirm that the methods are robust to noise, and do not put unreasonable expectations on users. We hope that these methods will help move the Semantic Web closer to fulfilling its promise.",
+isbn="978-3-540-39718-2"
+}
 
 
 @misc{Tacorec,
@@ -103,47 +114,10 @@ howpublished = {\url{https://senior.ceng.metu.edu.tr/2020/tacorec/}},
 },
 
 @misc{Amazonfoodreviews,
-title = {Amazon Food Reviews Dataset},
-howpublished = {\url{https://snap.stanford.edu/data/web-FineFoods.html}},
-},
-
-@misc{Dijkstra,
-author = {Edsger Wybe Dijkstra},
-title = {Dijkstra's Algorithm},
-howpublished = {\url{https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm}},
-},
-
-@misc{Smallworld,
-title = {Small-world Network},
-howpublished = {\url{https://en.wikipedia.org/wiki/Small-world_network}},
-},
-
-@misc{Surprise,
-title = {Surprise Library},
-howpublished = {\url{http://surpriselib.com/}},
-},
-
-@misc{Datamining,
-title = {METU Data Mining Research Group},
-howpublished = {\url{http://ceng.metu.edu.tr/data-mining-group}},
-},
-
-@misc{Numpy,
-title = {Numpy Library},
-howpublished = {\url{https://numpy.org/}},
-},
-
-@misc{Matplotlib,
-title = {Matplotlib Library},
-howpublished = {\url{https://matplotlib.org/}},
-},
-
-@misc{Scipy,
-title = {Scipy Library},
-howpublished = {\url{https://www.scipy.org/}},
-},
-
-@misc{Neo4j,
-title = {Neo4j},
-howpublished = {\url{https://neo4j.com/}},
-},
+      title={From Amateurs to Connoisseurs: Modeling the Evolution of User Expertise through Online Reviews}, 
+      author={Julian McAuley and Jure Leskovec},
+      year={2013},
+      eprint={1303.4402},
+      archivePrefix={arXiv},
+      primaryClass={cs.SI}
+}

@@ -30,7 +30,7 @@
 	
 	\subsubsection{Graph Module} Graph Module is responsible for three tasks:
 	\begin{enumerate}
-		\item Constructing "adjacency matrix" from "customer versus product table" provided by Filterer module
+		\item Constructing "adjacency matrix" from "customers versus products matrix" provided by the Filterer
 		\item Constructing "distance matrix" by performing Dijkstra's algorithm on the "adjacency matrix"
 		\item Constructing "trust matrix" by taking the reciprocal of the "distance matrix"
 	\end{enumerate}
@@ -53,7 +53,7 @@
 		\caption{$c_{1}$ and $c_{2}$ have at least one common product while $c_{1}$ and $c_{3}$ do not have a common product}
 	\end{figure}
 
-	\textbf{Problem encountered with Proposed Method 1:} During the tests performed on the Movielens100k dataset, I observed that although the dataset is sparse, the maximum distance between two customers was calculated as 2. In other words, the graph was kind of a "Small-world Network"\cite{Smallworld}. Since the distances were distributed in such small range, trust values calculated with this method were not so meaningful. With this observation, I decided to propose another method and use the "Unweighted Graph" method in extremely sparse datasets.
+	\textbf{Problem encountered with Proposed Method 1:} During the tests performed on the Movielens100k dataset, I observed that although the dataset is sparse, the maximum distance between two customers was calculated as 2. In other words, the graph was kind of a \href{https://en.wikipedia.org/wiki/Small-world_network}{Small-world Network}. Since the distances were distributed in such small range, trust values calculated with this method were not so meaningful. With this observation, I decided to propose another method and use the "Unweighted Graph" method in extremely sparse datasets.
 	
 	\subparagraph{Proposed Method 2: Euclidean Distance Weighted Graph}\mbox{}\\
 	\label{prop_method_2}
@@ -80,7 +80,7 @@
 	\end{figure}
 	
 	\subparagraph{Dijkstra's Algorithm}\mbox{}\\
-	To construct the "distance matrix", the graph module uses "Dijkstra's Algorithm"\cite{Dijkstra} which takes the adjacency matrix as a parameter and returns the distance matrix.
+	To construct the "distance matrix", the graph module uses \href{https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm}{Dijkstra's Algorithm} which takes the adjacency matrix as a parameter and returns the distance matrix.
 	
 	\paragraph{Trust Calculation}\mbox{}\\
 	After calculating the shortest distance between each pair of customers using "Dijkstra's Algorithm", to calculate the trust scores between customers Graph module uses
@@ -98,12 +98,39 @@
 	
 	\subsubsection{Filterer Module} The Filterer Module is responsible for;
 	\begin{itemize}
-	\item Cleaning/Filtering the provided transaction list (optional)
-	\item Calculating cosine similarities between customers (optional)
-	\item Calculating weights between customers
+	\item Calculating cosine similarities between customers (for Proposed Method 1)
+	\item Calculating weights
 	\item If the dataset consists of implicit ratings calculating recommendation coefficients otherwise making predictions for products
-	\item Selecting k-products with the highest coefficients/predictions to recommend for each customer
+	\item Selecting k products with the highest coefficients/predictions to recommend for each customer
 	\end{itemize}
+
+	{
+	\center
+	\begin{algorithm}[H]
+		\NoCaptionOfAlgo
+		\SetAlgoLined
+			construct customers versus products matrix using transactions provided by the Recommender\;
+			create a Graph object g by giving customers versus products matrix as a parameter\;
+			\If{Proposed Method 1 has been chosen}{
+				construct similarity matrix based on cosine similarity between customers\;
+				construct weight matrix using the trust matrix of the g and the similarity matrix\;
+			}\Else{
+				weight matrix equals to the trust matrix of the g\;
+			}
+			\ForEach{customer c}{
+				choose n customers that c trusts most as neighbors\;
+				\ForEach{product p purchased by the neighbours}{
+					\If{c purchased p}{
+						continue;
+					}\Else{
+						calculate recommendation coefficient using the corresponding rows of the weight and customers versus products matrices for p\;
+					}
+				}
+				recommend k products with the highest recommendation coefficients\;
+			}
+		\caption{Pseudocode for the Filterer}
+	\end{algorithm}
+}
 
 	\paragraph{Calculating Weights} \mbox{}\\
 	If \ref{prop_method_1} being used,
@@ -135,6 +162,6 @@
 	
 	\subsubsection{Recommender Module} Recommender Module is responsible for reading/writing. The module has two tasks:
 	\begin{enumerate}
-		\item Getting transaction list which contains customer id product id pairs from the Neo4j database using neo4j driver and sending the list to the Filterer module as parameter.
+		\item Getting transaction list which contains customer id -product id pairs from the Neo4j database using neo4j driver and sending the list to the Filterer module as parameter.
 		\item Getting the recommendation list which contains ids of the customers and corresponding recommended products from the Filterer module and writing these recommendations to Neo4j database as a relationship between the customer and the recommended product using neo4j driver.
 	\end{enumerate}

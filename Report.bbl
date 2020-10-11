@@ -1,55 +1,9 @@
-\begin{thebibliography}{10}
-
-\bibitem{Amazonfoodreviews}
-Amazon food reviews dataset.
-\newblock \url{https://snap.stanford.edu/data/web-FineFoods.html}.
-
-\bibitem{Epinions}
-Epinions dataset.
-\newblock \url{https://snap.stanford.edu/data/soc-Epinions1.html}.
-
-\bibitem{Matplotlib}
-Matplotlib library.
-\newblock \url{https://matplotlib.org/}.
-
-\bibitem{Datamining}
-Metu data mining research group.
-\newblock \url{http://ceng.metu.edu.tr/data-mining-group}.
-
-\bibitem{Neo4j}
-Neo4j.
-\newblock \url{https://neo4j.com/}.
-
-\bibitem{Numpy}
-Numpy library.
-\newblock \url{https://numpy.org/}.
-
-\bibitem{Scipy}
-Scipy library.
-\newblock \url{https://www.scipy.org/}.
-
-\bibitem{Smallworld}
-Small-world network.
-\newblock \url{https://en.wikipedia.org/wiki/Small-world_network}.
-
-\bibitem{Surprise}
-Surprise library.
-\newblock \url{http://surpriselib.com/}.
+\begin{thebibliography}{1}
 
 \bibitem{Tacorec}
 {\sc Aksoy, K., Odabas, M., Bozdogan, I., and Temur, A.}
 \newblock Tacorec.
 \newblock \url{https://senior.ceng.metu.edu.tr/2020/tacorec/}, 2020.
-
-\bibitem{Dijkstra}
-{\sc Dijkstra, E.~W.}
-\newblock Dijkstra's algorithm.
-\newblock \url{https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm}.
-
-\bibitem{Movielens}
-{\sc Harper, F.~M., and Konstan, J.~A.}
-\newblock The movielens datasets: History and context.
-\newblock {\em ACM Trans. Interact. Intell. Syst. 5}, 4 (Dec. 2015).
 
 \bibitem{Eigentrust}
 {\sc Kamvar, S.~D., Schlosser, M.~T., and Garcia-Molina, H.}
@@ -75,11 +29,23 @@ Surprise library.
   Systems\/} (New York, NY, USA, 2007), RecSys '07, Association for Computing
   Machinery, p.~17–24.
 
+\bibitem{Amazonfoodreviews}
+{\sc McAuley, J., and Leskovec, J.}
+\newblock From amateurs to connoisseurs: Modeling the evolution of user
+  expertise through online reviews, 2013.
+
 \bibitem{papagelis_article}
 {\sc Papagelis, M., Plexousakis, D., and Kutsuras, T.}
 \newblock Alleviating the sparsity problem of collaborative filtering using
   trust inferences.
 \newblock In {\em Trust Management\/} (Berlin, Heidelberg, 2005), P.~Herrmann,
   V.~Issarny, and S.~Shiu, Eds., Springer Berlin Heidelberg, pp.~224--239.
+
+\bibitem{Epinions}
+{\sc Richardson, M., Agrawal, R., and Domingos, P.}
+\newblock Trust management for the semantic web.
+\newblock In {\em The Semantic Web - ISWC 2003\/} (Berlin, Heidelberg, 2003),
+  D.~Fensel, K.~Sycara, and J.~Mylopoulos, Eds., Springer Berlin Heidelberg,
+  pp.~351--368.
 
 \end{thebibliography}
