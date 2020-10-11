@@ -27,9 +27,9 @@
 		\label{fig:eigentrust_structure}
 	\end{figure}
 	\subsubsection{About Eigentrust} \label{about_eigentrust}
-	Eigentrust\cite{Eigentrust} is a reputation calculation algorithm based on the number of positive and negative transactions between customers and mainly designed for peer-to-peer networks. In our case, Eigentrust represents how strongly connected the customers are to their communities. Eigentrust scores calculated by using the eigentrust module provided by TACoRec and stored in Neo4j database as a property of the relationship between a customer and his/her community. 
+	Eigentrust\cite{Eigentrust} is a reputation calculation algorithm based on the number of positive and negative transactions between customers and mainly designed for peer-to-peer networks. In our case, Eigentrust represents how strongly connected the customers are to their communities. Eigentrust scores are calculated by using the Eigentrust module provided by TACoRec and stored in the Neo4j database as a property of the relationship between a customer and his/her community. 
 	\subparagraph{Problem encountered with Eigentrust:}
-	Especially for the customers belong to communities with small size and low densities, Eigentrust scores stored in the database were either very small or equal to zero (check Figure \ref{fig:eigentrust_distribution_figure}). Most of the customers with zero Eigentrust were eliminated after filtering the network from customers with a small number of products. Unfortunately, even the filtering couldn't significantly improve the situation. Distribution of the Eigentrust scores before and after the filtering, can be found in \ref{eigentrust_distribution_section}
+	Especially for the customers belong to communities with small size and low densities, Eigentrust scores stored in the database were either very small or equal to zero (check Figure \ref{fig:eigentrust_distribution_figure}). Most of the customers with zero Eigentrust were eliminated after filtering the network from customers with a small number of products. Unfortunately, even the filtering couldn't significantly improve the situation. Distribution of the Eigentrust scores before and after the filtering can be found in \ref{eigentrust_distribution_section}
 
 	\subsubsection{Filterer Module} The Filterer Module is responsible for;
 	\begin{itemize}
