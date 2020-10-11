@@ -14,7 +14,7 @@
 \end{figure}
 \subsection{Libraries Used in Implementation Phase}
 	\subsubsection{\href{https://neo4j.com/}{Neo4j}}
-	Neo4j is a graph database management system where data is organized as nodes, relationships, and properties. The communication between recommender and the database is maintained by Neo4j driver.
+	Neo4j is a graph database management system where data is organized as nodes, relationships, and properties. The communication between recommender and the database was maintained by Neo4j driver.
 	\subparagraph{Driver Installation}:
 	\begin{lstlisting}[language=bash]
 	pip install neo4j
@@ -80,7 +80,7 @@
 	\end{lstlisting}
 	
 	\subsubsection{\href{https://www.scipy.org/}{Scipy}}
-	SciPy is a Python library used for scientific computing. Similar to Numpy, many of the Scipy functions are written in C which provides a solution to the slowness caused by interpretation. For this reason, we prefer to use the "Dijkstra's Algorithm" provided by Scipy rather than implementing it by ourselves.
+	SciPy is a Python library used for scientific computing. Similar to Numpy, many of the Scipy functions are written in C which provides a solution to the slowness caused by interpretation. For this reason, we preferred to use the "Dijkstra's Algorithm" provided by Scipy rather than implementing it by ourselves.
 	\subparagraph{Installation}:
 	\begin{lstlisting}[language=bash]
 	pip install scipy
@@ -113,7 +113,7 @@
 	\end{lstlisting}
 \subsection{Libraries Used in Testing Phase}
 	\subsubsection{\href{http://surpriselib.com/}{Surprise}} 
-	Surprise is a Python library for building and analyzing recommender systems. We use it for evaluating the performance of the trust based recommenders on various datasets and comparing them with the provided built-in recommender systems.
+	Surprise is a Python library for building and analyzing recommender systems. We used it for evaluating the performance of the trust-based recommenders on various datasets and comparing them with the provided built-in recommender systems.
 	\label{surprise}
 	\subparagraph{Installation}:
 	\begin{lstlisting}[language=bash]
@@ -137,7 +137,7 @@
 	\end{lstlisting}
 	
 	\subsubsection{\href{https://matplotlib.org/}{Matplotlib}}
-	Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python. We use it to visualize the evaluation results of the recommenders and  statistical properties of the dataset such as the distribution of Eigentrust.
+	Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python. We used it to visualize the evaluation results of the recommenders and  statistical properties of the dataset such as the distribution of Eigentrust.
 	\subparagraph{Installation}:
 	\begin{lstlisting}[language=bash]
 	pip install matplotlib

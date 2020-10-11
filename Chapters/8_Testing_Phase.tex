@@ -1,7 +1,11 @@
 	Although there are many factors such as diversity, coverage, serendipity that determine the efficiency of recommendation systems, in this project we focused on accuracy and decided to left other factors beyond the scope.
 	\subsubsection{Methods}
-	\paragraph{Leave-one-out Cross Validation}
-	\paragraph{Shuffle Split Cross Validation}
+	\paragraph{Leave-one-out Cross Validation} \mbox{} \\
+	In Leave-one-out Cross Validation, for the dataset with n data in the original sample then, n-1 samples are used as training set while the remaining data are used to test accuracy. This process is repeated for all n data and the final result calculated by taking the average of these n tests.
+	
+	\paragraph{Shuffle Split Cross Validation} \mbox{} \\
+	 \href{https://surprise.readthedocs.io/en/stable/model_selection.html#surprise.model_selection.split.ShuffleSplit}{Shuffle Split Cross Validation} randomly samples the dataset during each iteration to generate training and test sets. For the Shuffle Split CV, number of splits was chosen as 3 and the the final result calculated by taking the average of these three iterations.
+	
 	\subsubsection{Results}
 	\paragraph{Stockmount} \mbox{}\\
 	\textbf{About the dataset:} Dataset origanally consists of 142501 customers and 73482 products with implicit ratings (i.e. purchased or not). However, to make the customer versus product matrix a little denser, customers with less than 2 products and products with less than 2 customers are eliminated. After filtering,
@@ -37,7 +41,7 @@
 			\hline
 		\end{tabular}
 	\end{center} 
-	Results were analysed on the basis of community density, community size and number of products purchased by the customer, but no solid correlation with accuracy found.
+	Results were analysed on the basis of community density, community size and number of products purchased by the customer, but no significant correlation with accuracy found.
 	
 	\paragraph{Amazon Food Reviews \cite{Amazonfoodreviews}} \mbox{}\\
 	\textbf{About the dataset:} 
@@ -55,10 +59,10 @@
 		\end{tabular}
 	\end{center} 
 	\vspace{0.5cm}
-	\textbf{Testing method:} For this dataset, I wanted to see how efficiently the recommender works on extremely sparse datasets, as a result I preferred to use "Shuffle Split CV" as the cross validation iterator since it is easy to set up the test and train set ratios. The tests with the test set size greater than 0.5 were applied to see the performance of the implemented recommender in cold start and to understand how it improved the collaborative filtering method using the "mean squared difference similarity". As the test metrics, RMSE and MAE were used. Tests were performed using Surprise.\\
+	\textbf{Testing method:} For this dataset, I wanted to see how efficiently the recommender works on extremely sparse datasets, as a result I preferred to use "Shuffle Split CV" as the cross validation iterator since it is easy to set up the test and training set ratios. The tests with the test set size greater than 0.5 were applied to see the performance of the implemented recommender in cold start and to understand how it improved the collaborative filtering method using the "mean squared difference similarity". As the test metrics, RMSE and MAE were used. Tests were performed using Surprise.\\
 	\textbf{Tested Recommender:} Inverse Distance Weighted Trust Based Recommender (with the Proposed Method 2)\ref{inverse_section} \\ \\
 	\textbf{Benchmark:} \\
-	\textbf{Testset: 0.2, Trainset: 0.8, Sparsity: 0.9891}
+	\textbf{Test set: 0.2, Training set: 0.8, Sparsity: 0.9891}
 	\begin{center}
 		\begin{tabular}{ | c | c | c | c | c | c | c | c |}
 			\hline
@@ -71,7 +75,7 @@
 		\end{tabular}
 	\end{center} 
 	\vspace{1cm}
-	\textbf{Testset: 0.3, Trainset: 0.7, Sparsity: 0.9904}
+	\textbf{Test set: 0.3, Training set: 0.7, Sparsity: 0.9904}
 	\begin{center}
 	\begin{tabular}{ | c | c | c | c | c | c | c | c |}
 		\hline
@@ -84,7 +88,7 @@
 	\end{tabular}
 	\end{center} 
 	\vspace{1cm}
-	\textbf{Testset: 0.4, Trainset: 0.6, Sparsity: 0.9918}
+	\textbf{Test set: 0.4, Training set: 0.6, Sparsity: 0.9918}
 	\begin{center}
 	\begin{tabular}{ | c | c | c | c | c | c | c | c |}
 		\hline
@@ -97,7 +101,7 @@
 	\end{tabular}
 	\end{center} 
 	\vspace{1cm}
-	\textbf{Testset: 0.5, Trainset: 0.5, Sparsity: 0.9931}
+	\textbf{Test set: 0.5, Training set: 0.5, Sparsity: 0.9931}
 	\begin{center}
 	\begin{tabular}{ | c | c | c | c | c | c | c | c |}
 		\hline
@@ -110,7 +114,7 @@
 	\end{tabular}
 	\end{center} 
 	\vspace{1cm}
-	\textbf{Testset: 0.6, Trainset: 0.4, Sparsity: 0.9945}
+	\textbf{Test set: 0.6, Training set: 0.4, Sparsity: 0.9945}
 	\begin{center}
 	\begin{tabular}{ | c | c | c | c | c | c | c | c |}
 		\hline
@@ -123,7 +127,7 @@
 	\end{tabular}
 	\end{center} 
 	\vspace{1cm}
-	\textbf{Testset: 0.7, Trainset: 0.3, Sparsity: 0.9958}
+	\textbf{Test set: 0.7, Training set: 0.3, Sparsity: 0.9958}
 	\begin{center}
 	\begin{tabular}{ | c | c | c | c | c | c | c | c |}
 		\hline
@@ -136,7 +140,7 @@
 	\end{tabular}
 	\end{center} 
 	\vspace{1cm}
-	\textbf{Testset: 0.8, Trainset: 0.2, Sparsity: 0.9970}
+	\textbf{Test set: 0.8, Training set: 0.2, Sparsity: 0.9970}
 	\begin{center}
 	\begin{tabular}{ | c | c | c | c | c | c | c | c |}
 		\hline
@@ -149,7 +153,7 @@
 	\end{tabular}
 	\end{center} 
 	\vspace{1cm}
-	\textbf{Testset: 0.9, Trainset: 0.1, Sparsity: 0.9979}
+	\textbf{Test set: 0.9, Training set: 0.1, Sparsity: 0.9979}
 	\begin{center}
 	\begin{tabular}{ | c | c | c | c | c | c | c | c |}
 		\hline
@@ -165,7 +169,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.42]{rmse.png}
-	\caption{RMSE versus Testset Size. For instance, 0.2 means testset-trainset ratio is $20\%-80\%$ . Additionally, floats in parentheses represent the sparsity of trainset for corresponding test set size}
+	\caption{RMSE versus Test set Size. For instance, 0.2 means test set-training set ratio is $20\%-80\%$ . Additionally, floats in parentheses represent the sparsity of training set for corresponding test set size}
 	\label{fig:rmse}
 \end{figure}
 
