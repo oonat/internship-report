@@ -27,16 +27,16 @@
 		\label{fig:eigentrust_structure}
 	\end{figure}
 	\subsubsection{About Eigentrust} \label{about_eigentrust}
-	Eigentrust\cite{Eigentrust} is a reputation calculation algorithm based on the number of positive and negative transactions between customers and mainly designed for peer-to-peer networks. In our case, Eigentrust represents how strongly connected the customers are to their communities. Eigentrust scores are calculated by using the Eigentrust module provided by TACoRec and stored in the Neo4j database as a property of the relationship between a customer and his/her community. 
+	Eigentrust\cite{Eigentrust} is a reputation calculation algorithm based on the number of positive and negative transactions between customers and mainly designed for peer-to-peer networks. In our case, Eigentrust represents how strongly connected the customers are to their communities. Eigentrust scores are calculated by using the Eigentrust module provided by TACoRec, and stored in the Neo4j database as a property of the relationship between a customer and his/her community. 
 	\subparagraph{Problem encountered with Eigentrust:}
-	Especially for the customers belong to communities with small size and low densities, Eigentrust scores stored in the database were either very small or equal to zero (check Figure \ref{fig:eigentrust_distribution_figure}). Most of the customers with zero Eigentrust were eliminated after filtering the network from customers with a small number of products. Unfortunately, even the filtering couldn't significantly improve the situation. Distribution of the Eigentrust scores before and after the filtering can be found in \ref{eigentrust_distribution_section}
+	Especially for the customers who belong to communities with small size and low densities, Eigentrust scores stored in the database were either very small or equal to zero (check Figure \ref{fig:eigentrust_distribution_figure}). Most of the customers with zero Eigentrust were eliminated after filtering the network from customers with a small number of products. Unfortunately, even the filtering couldn't significantly improve the situation. Distribution of the Eigentrust scores before and after the filtering can be found in \ref{eigentrust_distribution_section}
 
 	\subsubsection{Filterer Module} The Filterer Module is responsible for;
 	\begin{itemize}
 		\item Getting transaction/Eigentrust records for each community from the Neo4j database via Neo4j driver
 		\item Calculating cosine similarities between customers
 		\item Calculating weights
-		\item If the dataset consists of implicit ratings calculating recommendation coefficients otherwise making predictions for products
+		\item If the dataset consists of implicit ratings, calculating recommendation coefficients otherwise making predictions for products
 		\item Selecting k products with the highest coefficients/predictions to recommend for each customer
 	\end{itemize}
 	{
@@ -44,14 +44,14 @@
 		\begin{algorithm}[H]
 			\NoCaptionOfAlgo
 			\SetAlgoLined
-			\ForEach{community i}{
-				get transactions and eigentrusts of the customers belong to the i\;
+			\For{community i}{
+				get transactions and eigentrusts of the customers belonging to the i\;
 				construct customers versus products matrix using transactions\;
 				construct trust matrix using the eigentrusts\;
-				construct similarity matrix based on cosine similarity between customers belonged to the i\;
+				construct similarity matrix based on cosine similarity between customers belonging to the i\;
 				construct weight matrix using the trust and similarity matrices\;
-				\For{customer c belong to i}{
-					\ForEach{product p purchased by neighbours}{
+				\For{customer c belonging to i}{
+					\For{product p purchased by neighbours}{
 						\If{c purchased p}{
 						continue;
 						}\Else{
@@ -71,7 +71,7 @@
 	w_{c_{target}}(c_{2}) = \frac{2*sim(c_{target},c_{2})*trust(c_{2})}{sim(c_{target},c_{2})+trust(c_{2})}
 	\end{split}
 	\end{equation*}
-	where $sim(c_{target},c_{2})$ represents "cosine similarity" between customers and $trust(c_{2})$ represents eigentrust belonged to $c_{2}$.
+	where $sim(c_{target},c_{2})$ represents "cosine similarity" between customers and $trust(c_{2})$ represents the Eigentrust of $c_{2}$.
 
 	\paragraph{Calculating Recommendation Coefficients}	
 	\begin{equation*} 
@@ -88,8 +88,8 @@
 	p(i) = \frac{\sum_{c \in C}^{} w_{c_{target}}(c)*r_{c}}{\sum_{c \in C}^{} w_{c_{target}}(c)}
 	\end{split}
 	\end{equation*}
-	where $p(i)$ represents the prediction for product $i$ and $r_{c}$ represents rating given by customer $c$ for product $i$. $C$ customer set only contains the customers who purchased product i. \\
+	where $p(i)$ represents the rate prediction for product $i$ and $r_{c}$ represents the rating given by customer $c$ for product $i$. $C$ customer set only contains the customers who purchased product i. \\
 	
-	\textbf{Important remark:} $C$ customer set used in functions given above consists only of customers belonged to the same community with $c_{target}$ while there is no such restriction in \ref{inverse_section}.
+	\textbf{Important remark:} $C$ customer set used in functions given above consists only of customers who belong to the same community with $c_{target}$ while there is no such restriction in \ref{inverse_section}.
 
 	\subsubsection{Recommender Module} Recommender Module is responsible for getting the recommendation list that contains ids of the customers and corresponding recommended products from the Filterer module and writing these recommendations to the Neo4j database as a relationship between the customer and the recommended product using Neo4j driver.
