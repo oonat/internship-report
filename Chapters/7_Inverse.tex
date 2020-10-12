@@ -30,9 +30,9 @@
 	
 	\subsubsection{Graph Module} Graph Module is responsible for three tasks:
 	\begin{enumerate}
-		\item Constructing "adjacency matrix" from "customers versus products matrix" provided by the Filterer
-		\item Constructing "distance matrix" by performing Dijkstra's algorithm on the "adjacency matrix"
-		\item Constructing "trust matrix" by taking the reciprocal of the "distance matrix"
+		\item Constructing the "adjacency matrix" from the "customers versus products matrix" provided by the Filterer
+		\item Constructing the "distance matrix" by performing Dijkstra's algorithm on the the "adjacency matrix"
+		\item Constructing the "trust matrix" by taking the reciprocal of the "distance matrix"
 	\end{enumerate}
 	\paragraph{Constructing Adjacency Matrix and Distance Matrix}\mbox{}\\
 	Since the recommender system is tested on both the datasets with implicit ratings and the datasets with explicit ratings, to construct the "adjacency matrix" from customer versus products table, I propose two methods: 
@@ -50,7 +50,7 @@
 		\path[-] (a) edge (b);
 		\path[-] (b) edge (c);
 		\end{tikzpicture} 
-		\caption{$c_{1}$ and $c_{2}$ have at least one common product while $c_{1}$ and $c_{3}$ do not have a common product}
+		\caption{$c_{1}$ and $c_{2}$ have at least one common product while $c_{1}$ and $c_{3}$ don't have any common product}
 	\end{figure}
 
 	\textbf{Problem encountered with Proposed Method 1:} During the tests performed on the Movielens100k dataset, I observed that although the dataset is sparse, the maximum distance between two customers was calculated as 2. In other words, the graph was kind of a \href{https://en.wikipedia.org/wiki/Small-world_network}{Small-world Network}. Since the distances were distributed in such a small range, trust values calculated with this method were not so meaningful. With this observation, I decided to propose another method and use the "Unweighted Graph" method only in extremely sparse datasets.
@@ -76,7 +76,7 @@
 		\path[-] (a) edge node[above]{3} (b);
 		\path[-] (b) edge node[above]{2} (c);
 		\end{tikzpicture} 
-		\caption{euclidean distance between $c_{1}$ and $c_{2}$ equals to 3, and $c_{1}$ and $c_{3}$ do not have a common product}
+		\caption{euclidean distance between $c_{1}$ and $c_{2}$ equals to 3, while $c_{1}$ and $c_{3}$ don't have any common product}
 	\end{figure}
 	
 	\subparagraph{Dijkstra's Algorithm}\mbox{}\\
@@ -94,13 +94,13 @@
 	\end{equation*}
 	function where $d(c_{1}, c_{2})$ represents the shortest distance between the $customer_{1}$ and $customer_{2}$. If $d(c_{1}, c_{2})$ equals $np.inf$ that means either there is no path connecting the customers or the shortest distance between the customers exceeds the distance limit specified in the config file. \\
 	
-	\textbf{A benefit of the method:} Especially for excessively sparse datasets, recommenders using euclidean distance-based similarity fails since they cannot calculate a similarity score for the customer pairs with no common products.	Since the  "Dijkstra's Algorithm" propagates weights even for the customer pairs with no common products, we are able to calculate trust scores between them.
+	\textbf{A benefit of the method:} Especially for excessively sparse datasets, recommender systems using euclidean distance-based similarity fails since they cannot calculate a similarity score for the customer pairs who do not have a common products.	Since the  "Dijkstra's Algorithm" propagates the weights even for the mentioned customer pairs, we are able to calculate the trust scores between them.
 	
 	\subsubsection{Filterer Module} The Filterer Module is responsible for;
 	\begin{itemize}
-	\item Calculating cosine similarities between customers (for Proposed Method 1)
-	\item Calculating weights
-	\item If the dataset consists of implicit ratings, calculating recommendation coefficients otherwise making predictions for products
+	\item Calculating the cosine similarities between customers (for Proposed Method 1)
+	\item Calculating the weights
+	\item If the dataset consists of implicit ratings, calculating the recommendation coefficients otherwise making predictions for products
 	\item Selecting k products with the highest coefficients/predictions to recommend for each customer
 	\end{itemize}
 
@@ -139,7 +139,7 @@
 		w(c_{1}, c_{2}) = \alpha*sim(c_{1},c_{2})+(1-\alpha)*trust(c_{1},c_{2})
 	\end{split}
 	\end{equation*}
-	where $sim(c_{1},c_{2})$ represents "cosine similarity" between customers, $trust(c_{1},c_{2})$ represents the trust calculated by the Graph Module and $\alpha$ is a weight ratio that changes according to the dataset .\\ \\
+	where $sim(c_{1},c_{2})$ represents the "cosine similarity" between customers, $trust(c_{1},c_{2})$ represents the trust calculated by the Graph Module and $\alpha$ is a weight ratio that changes according to the dataset .\\ \\
 	Otherwise, $w(c_{1}, c_{2})$ directly equals to $trust(c_{1},c_{2})$ since \ref{prop_method_2} method is already based on similarity.
 
 	\paragraph{Calculating Recommendation Coefficients}
@@ -162,6 +162,6 @@
 	
 	\subsubsection{Recommender Module} Recommender Module is responsible for reading/writing. The module has two tasks:
 	\begin{enumerate}
-		\item Getting transaction list which contains customer id -product id pairs from the Neo4j database using neo4j driver and sending the list to the Filterer module as a parameter.
-		\item Getting the recommendation list that contains ids of the customers and corresponding recommended products from the Filterer module and writing these recommendations to the Neo4j database as a relationship between the customer and the recommended product using neo4j driver.
+		\item Getting the list of transactions which contains (customer id ,product id) pairs from the Neo4j database using Neo4j driver and giving the list to the Filterer module as a parameter.
+		\item Getting the list of recommendations that contains ids of the customers and corresponding recommended products from the Filterer module and writing these recommendations to the Neo4j database as a relationship between the customer and the recommended product using Neo4j driver.
 	\end{enumerate}

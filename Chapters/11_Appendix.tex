@@ -3,13 +3,13 @@
 	\begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.42]{eigentrust_distribution_detailed}
-	\caption{Distribution of the Eigentrust scores before filtering. As can be seen, nearly 17500 of the customers have zero Eigentrust.}
+	\caption{Distribution of the Eigentrust scores before filtering. As can be seen, nearly 17500 customers have zero Eigentrust.}
 	\label{fig:eigentrust_distribution_figure}
 	\end{figure}
 	\begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.42]{eigentrust_distribution_detailed_after_filter}
-	\caption{Distribution of the Eigentrust scores after filtering.}
+	\caption{Distribution of the Eigentrust scores after filtering (threshold=2).}
 	\label{fig:eigentrust_distribution_figure_after_filtering}
 \end{figure}
 \subsection{Libraries Used in Implementation Phase}
@@ -80,7 +80,7 @@
 	\end{lstlisting}
 	
 	\subsubsection{\href{https://www.scipy.org/}{Scipy}}
-	SciPy is a Python library used for scientific computing. Similar to Numpy, many of the Scipy functions are written in C which provides a solution to the slowness caused by interpretation. For this reason, we preferred to use the "Dijkstra's Algorithm" provided by Scipy rather than implementing it by ourselves.
+	SciPy is a Python library used for scientific computing. Similar to Numpy, many of the Scipy functions are written in C which provides a solution to the slowness caused by interpretation.
 	\subparagraph{Installation}:
 	\begin{lstlisting}[language=bash]
 	pip install scipy

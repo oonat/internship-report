@@ -34,9 +34,9 @@
 	\subsubsection{Filterer Module} The Filterer Module is responsible for;
 	\begin{itemize}
 		\item Getting transaction/Eigentrust records for each community from the Neo4j database via Neo4j driver
-		\item Calculating cosine similarities between customers
-		\item Calculating weights
-		\item If the dataset consists of implicit ratings, calculating recommendation coefficients otherwise making predictions for products
+		\item Calculating the cosine similarities between customers
+		\item Calculating the weights
+		\item If the dataset consists of implicit ratings, calculating the recommendation coefficients otherwise making predictions for products
 		\item Selecting k products with the highest coefficients/predictions to recommend for each customer
 	\end{itemize}
 	{
@@ -71,7 +71,7 @@
 	w_{c_{target}}(c_{2}) = \frac{2*sim(c_{target},c_{2})*trust(c_{2})}{sim(c_{target},c_{2})+trust(c_{2})}
 	\end{split}
 	\end{equation*}
-	where $sim(c_{target},c_{2})$ represents "cosine similarity" between customers and $trust(c_{2})$ represents the Eigentrust of $c_{2}$.
+	where $sim(c_{target},c_{2})$ represents the "cosine similarity" between customers and $trust(c_{2})$ represents the Eigentrust of $c_{2}$.
 
 	\paragraph{Calculating Recommendation Coefficients}	
 	\begin{equation*} 
