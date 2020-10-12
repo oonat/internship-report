@@ -45,17 +45,17 @@
 			\NoCaptionOfAlgo
 			\SetAlgoLined
 			\For{community i}{
-				get transactions and eigentrusts of the customers belonging to the i\;
+				get transactions and eigentrusts of the customers belonging to i\;
 				construct customers versus products matrix using transactions\;
 				construct trust matrix using the eigentrusts\;
-				construct similarity matrix based on cosine similarity between customers belonging to the i\;
+				construct similarity matrix based on cosine similarity between customers belonging to i\;
 				construct weight matrix using the trust and similarity matrices\;
 				\For{customer c belonging to i}{
 					\For{product p purchased by neighbours}{
 						\If{c purchased p}{
 						continue;
 						}\Else{
-						calculate recommendation coefficient using the weight and customers versus products matrices for p\;
+						calculate recommendation coefficient of p using the weight and customers versus products matrices\;
 						}
 					}
 					recommend k products with the highest recommendation coefficients\;

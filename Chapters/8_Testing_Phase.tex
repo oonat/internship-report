@@ -1,14 +1,14 @@
 	Although there are many factors such as diversity, coverage, serendipity that determine the efficiency of recommendation systems, in this project we focused on accuracy and decided to leave other factors outside the scope of this project.
 	\subsubsection{Methods}
 	\paragraph{Leave-one-out Cross Validation} \mbox{} \\
-	In Leave-one-out Cross Validation, for the dataset with n data in the original sample then, n-1 samples are used as training set while the remaining data is used to test accuracy. This process is repeated for all n data and the final result calculated by taking the average of these n tests.
+	In 	 \href{https://surprise.readthedocs.io/en/stable/model_selection.html#surprise.model_selection.split.LeaveOneOut}{Leave-one-out Cross Validation}, for the dataset with n data, n-1 samples are used as training set while the remaining singleton is used to test accuracy. This process is repeated for all n data and the final result is calculated by taking the average of these n tests.
 	
 	\paragraph{Shuffle Split Cross Validation} \mbox{} \\
-	 \href{https://surprise.readthedocs.io/en/stable/model_selection.html#surprise.model_selection.split.ShuffleSplit}{Shuffle Split Cross Validation} randomly samples the dataset during each iteration to generate training and test sets. For the Shuffle Split CV, number of splits was chosen as 3 and the final result calculated by taking the average of these three iterations.
+	 \href{https://surprise.readthedocs.io/en/stable/model_selection.html#surprise.model_selection.split.ShuffleSplit}{Shuffle Split Cross Validation} randomly samples the dataset during each iteration to generate training and test sets at the given ratios. For the Shuffle Split CV, number of splits was chosen as 3 and the final result is calculated by taking the average of these three iterations.
 	
 	\subsubsection{Results}
 	\paragraph{Stockmount} \mbox{}\\
-	\textbf{About the dataset:} Dataset origanally consists of 142501 customers and 73482 products with implicit ratings (i.e. purchased or not). However, to make the customer versus product matrix a little denser, customers with less than 2 products and products with less than 2 customers are eliminated. After filtering,
+	\textbf{About the dataset:} Dataset origanally consists of 142501 customers and 73482 products with implicit ratings (i.e. purchased or not). However, to make the customer versus product matrix a little denser, customers with less than 2 products and products with less than 2 customers were eliminated. After the filtering,
 	\begin{center}
 		\begin{tabular}{ | c | c |}
 			\hline
@@ -20,12 +20,12 @@
 			\hline
 			Number of Communities & 175\\  
 			\hline
-			Sparsity & 99.808124 \% \\   
+			Sparsity of the customers versus products matrix & 99.808124 \% \\   
 			\hline
 		\end{tabular}
 	\end{center} 
 	\vspace{0.5cm}
-	\textbf{Testing method:} Since the dataset contains implicit ratings, I preferred to use "Hit Rate" rather than RMSE or MAE as the test metric and "Leave-one-out CV" as the cross validation iterator. Basically, for each deleted transaction, test module checked whether the product in the deleted transaction was within the recommended products.\\
+	\textbf{Testing method:} Since the dataset contains implicit ratings, I preferred to use "Hit Rate" rather than RMSE or MAE as the test metric and "Leave-one-out CV" as the cross validation iterator. Basically, for each transaction, test module used the remaining transactions as training set and checked whether the product in the tested transaction was within the recommended products or not.\\
 	\textbf{Tested Recommender:} Eigentrust Weighted Trust Based Recommender \ref{eigentrust_section} \\ \\
 	\textbf{Results:}
 	\begin{center}
@@ -59,7 +59,7 @@
 		\end{tabular}
 	\end{center} 
 	\vspace{0.5cm}
-	\textbf{Testing method:} For this dataset, I wanted to see how efficiently the recommender works on extremely sparse datasets, as a result I preferred to use "Shuffle Split CV" as the cross validation iterator since it is easy to set up the test and training set ratios. The tests with the test set size greater than 0.5 were applied to see the performance of the implemented recommender in cold start and to understand how it improved the collaborative filtering method using the "mean squared difference similarity". As the test metrics, RMSE and MAE were used. Tests were performed using Surprise.\\
+	\textbf{Testing method:} For this dataset, I wanted to see how efficiently the recommender works on extremely sparse datasets, as a result I preferred to use "Shuffle Split CV" as the cross validation iterator since it is easy to set up the test and training set ratios. The tests with the test set size greater than 0.5 were applied to see the performance of the implemented recommender in cold start and to understand how it improved the collaborative filtering method that uses the "Mean Squared Difference Similarity". As the test metrics, RMSE and MAE were used. The tests were performed using Surprise.\\
 	\textbf{Tested Recommender:} Inverse Distance Weighted Trust Based Recommender (with the Proposed Method 2)\ref{inverse_section} \\ \\
 	\textbf{Benchmark:} \\
 	\textbf{Test set: 0.2, Training set: 0.8, Sparsity: 0.9891}
@@ -169,13 +169,15 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.42]{rmse.png}
-	\caption{RMSE versus Test set Size. For instance, 0.2 means test set-training set ratio is $20\%-80\%$ . Additionally, floats in parentheses represent the sparsity of training set for corresponding test set size}
+	\vspace{-0.5cm}
+	\caption{RMSE versus Test set Size. For instance, 0.2 means test set-training set ratio is $20\%-80\%$ . Additionally, floats in parentheses represent the sparsity of the customers versus products matrix which is filled with training set for corresponding test set size}
 	\label{fig:rmse}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.42]{mae.png}
+	\vspace{-0.5cm}
 	\caption{MAE versus Testset Size}
 	\label{fig:mae}
 \end{figure}
